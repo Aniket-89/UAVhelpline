@@ -3,9 +3,7 @@ import IconCard from "../IconCard/IconCard";
 import DroneCard from "../DroneCard/DroneCard";
 import BlogCard from "../BlogCard/BlogCard";
 import Button from "../Button/Button";
-import { FaArrowRight } from "react-icons/fa6";
 import IndustryCard from "../IndustryCard/IndustryCard";
-import { GiWheat } from "react-icons/gi";
 import NewsletterForm from "../NewsletterForm/NewsletterForm";
 
 const Index = () => {

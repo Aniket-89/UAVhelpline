@@ -1,6 +1,4 @@
-import React from "react";
 import Button from "../Button/Button";
-import Input from "../Input/Input";
 import {
   FaSquareFacebook,
   FaLinkedinIn,
@@ -127,7 +125,7 @@ const Footer = () => {
         </div>
 
         <div className="">
-          <Input label="Enter your email..." />{" "}
+          {/* <Input  label="Enter your email..." />{" "} */}
           <Button styleType="solid" onClick={() => console.log("subscribed")}>
             Subscribe
           </Button>
