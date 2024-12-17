@@ -3,7 +3,7 @@ import IconCard from "../IconCard/IconCard";
 import DroneCard from "../DroneCard/DroneCard";
 import BlogCard from "../BlogCard/BlogCard";
 import Button from "../Button/Button";
-import { Logo, PillarSpiral } from "../../assets/assets";
+import { Logo, PillarSpiral, DaDrone, DaLogo } from "../../assets/assets";
 import IndustryCard from "../IndustryCard/IndustryCard";
 import NewsletterForm from "../NewsletterForm/NewsletterForm";
 
@@ -33,26 +33,27 @@ const Index = () => {
         </div>
         <div className="flex flex-col m-4 md:flex-row justify-evenly gap-4 items-center">
           <DroneCard
-            src="src/assets/drone-with-bag-m.png"
+            src={DaDrone}
             label="Drone Anatomy P10pro"
-            logoSrc="src/assets/da-logo-blk-outline.png"
+            logoSrc={DaLogo}
           >
             Most compact agriculture drone in the market
           </DroneCard>
           <DroneCard
-            src="src/assets/drone-with-bag-m.png"
+            src={DaDrone}
             label="Drone Anatomy P10pro"
-            logoSrc="src/assets/da-logo-blk-outline.png"
+            logoSrc={DaLogo}
           >
             Most compact agriculture drone in the market
           </DroneCard>
           <DroneCard
-            src="src/assets/drone-with-bag-m.png"
+            src={DaDrone}
             label="Drone Anatomy P10pro"
-            logoSrc="src/assets/da-logo-blk-outline.png"
+            logoSrc={DaLogo}
           >
             Most compact agriculture drone in the market
           </DroneCard>
+
         </div>
       </div>
 
@@ -63,13 +64,13 @@ const Index = () => {
         </h3>
         <span className="h-2 w-full md:w-12 bg-accent mb-4"></span>
         <div className="flex flex-col md:flex-row gap-4">
-          <BlogCard thumbnail="src/assets/drone-with-bag-m.png">
+          <BlogCard thumbnail={DaDrone}>
             India's most compact agriculture drone
           </BlogCard>
-          <BlogCard thumbnail="src/assets/drone-with-bag-m.png">
+          <BlogCard thumbnail={DaDrone}>
             India's most compact agriculture drone
           </BlogCard>
-          <BlogCard thumbnail="src/assets/drone-with-bag-m.png">
+          <BlogCard thumbnail={DaDrone}>
             India's most compact agriculture drone
           </BlogCard>
         </div>
