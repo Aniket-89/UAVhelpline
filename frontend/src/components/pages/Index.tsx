@@ -3,7 +3,24 @@ import IconCard from "../IconCard/IconCard";
 import DroneCard from "../DroneCard/DroneCard";
 import BlogCard from "../BlogCard/BlogCard";
 import Button from "../Button/Button";
-import { Logo, PillarSpiral, DaDrone, DaLogo } from "../../assets/assets";
+import {
+  Logo,
+  PillarSpiral,
+  DaDrone,
+  DaLogo,
+  AgriImage,
+  VideoImage,
+  VtolImage,
+  MappingImage,
+  TrainingImage,
+  SurveillanceImage,
+  ShieldIcon,
+  MoneyBagIcon,
+  DroneIcon,
+  PropellerIcon,
+  TrainingIcon,
+  PilotIcon,
+} from "../../assets/assets";
 import IndustryCard from "../IndustryCard/IndustryCard";
 import NewsletterForm from "../NewsletterForm/NewsletterForm";
 
@@ -12,15 +29,15 @@ const Index = () => {
     <div className="flex flex-col justify-between gap-8 overflow-hidden">
       <Banner />
 
-      <div className="bg-light container min-h-[293px] py-4 text-center mb-8 flex flex-col gap-4 justify-center">
+      <div className="bg-gradient-to-r from-light to-accent to container min-h-[293px] py-4 text-center mb-8 flex flex-col gap-4 justify-center">
         <h4>We can help you with...</h4>
         <div className="flex flex-wrap gap-2 justify-evenly px-4 mb-4">
-          <IconCard src={Logo}>Drone Insurance</IconCard>
-          <IconCard src={Logo}>Drone Loan</IconCard>
-          <IconCard src={Logo}>Buy Drones</IconCard>
-          <IconCard src={Logo}>Buy Drone parts</IconCard>
-          <IconCard src={Logo}>Drone Training</IconCard>
-          <IconCard src={Logo}>Pilot Jobs</IconCard>
+          <IconCard src={ShieldIcon}>Drone Insurance</IconCard>
+          <IconCard src={MoneyBagIcon}>Drone Loan</IconCard>
+          <IconCard src={DroneIcon}>Buy Drones</IconCard>
+          <IconCard src={PropellerIcon}>Buy Drone parts</IconCard>
+          <IconCard src={TrainingIcon}>Drone Training</IconCard>
+          <IconCard src={PilotIcon}>Pilot Jobs</IconCard>
         </div>
       </div>
 
@@ -53,7 +70,6 @@ const Index = () => {
           >
             Most compact agriculture drone in the market
           </DroneCard>
-
         </div>
       </div>
 
@@ -95,24 +111,24 @@ const Index = () => {
           </h2>
         </div>
         <div className="grid lg:grid-cols-6 md:grid-cols-2 gap-4 container justify-between">
-          <IndustryCard label="Agriculture"></IndustryCard>
-          <IndustryCard label="Agriculture" sicj={true}></IndustryCard>
-          <IndustryCard label="Agriculture"></IndustryCard>
-          <IndustryCard label="Agriculture" sicj={true}></IndustryCard>
-          <IndustryCard label="Agriculture"></IndustryCard>
-          <IndustryCard label="Agriculture" sicj={true}></IndustryCard>
+          <IndustryCard label="Agriculture" src={AgriImage} />
+          <IndustryCard label="Mapping" src={MappingImage} mar={true} />
+          <IndustryCard label="Training" src={TrainingImage} />
+          <IndustryCard label="VTOL" mar={true} src={VtolImage} />
+          <IndustryCard label="Surveillance" src={SurveillanceImage} />
+          <IndustryCard label="Videography" mar={true} src={VideoImage} />
         </div>
       </div>
 
       <div className="container lg:w-[60%] mx-auto mb-10 flex gap-2">
         <span className="w-4 mt-6 bg-accent"></span>
         <div className="flex flex-col">
-
-        <h3 className="text-neutral font-bold">Stay informed. Sign up for our mailing list.</h3>
-        <NewsletterForm />
+          <h3 className="text-neutral font-bold">
+            Stay informed. Sign up for our mailing list.
+          </h3>
+          <NewsletterForm />
         </div>
       </div>
-
     </div>
   );
 };
