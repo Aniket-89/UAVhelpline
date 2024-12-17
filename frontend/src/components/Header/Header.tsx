@@ -8,7 +8,7 @@ const Header = () => {
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   return (
-    <header className="z-10 sticky top-0 bg-primary">
+    <header className="z-10 sticky top-0 bg-primary border-b-[1px] border-b-primary">
       {/* Mobile Header */}
       <div className="lg:hidden flex justify-between items-start">
         <a href="#" className="flex items-center ml-2">
