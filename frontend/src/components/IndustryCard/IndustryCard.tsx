@@ -10,7 +10,6 @@ type IndustryCardProps = {
 };
 
 const IndustryCard: React.FC<IndustryCardProps> = ({ label, mar=false, src }) => {
-    const gi = 'GiWheat';
   return (
     <div
       className={`flex items-center lg:flex-col-reverse gap-4 group lg:relative cursor-pointer lg:w-48 lg:h-72 ${

@@ -4,7 +4,6 @@ import DroneCard from "../DroneCard/DroneCard";
 import BlogCard from "../BlogCard/BlogCard";
 import Button from "../Button/Button";
 import {
-  Logo,
   PillarSpiral,
   DaDrone,
   DaLogo,
