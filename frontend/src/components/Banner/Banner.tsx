@@ -3,7 +3,7 @@ import { phoneNumber, BannerImage, Spiral } from "../../assets/assets";
 
 const Banner = () => {
   return (
-    <div className="bg-accent3 h-[70vh] lg:h-[389px] flex lg:container items-center mb-24">
+    <div className="bg-accent3 h-[70vh] lg:h-[389px] flex mx-auto max-w-7xl md:w-[90%] items-center mb-24">
       <span className="w-[36px] h-full">
         <img
           src={Spiral}
