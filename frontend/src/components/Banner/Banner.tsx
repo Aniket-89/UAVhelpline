@@ -1,11 +1,15 @@
 import Button from "../Button/Button";
-import { BannerImage, Spiral } from "../../assets/assets";
+import { phoneNumber, BannerImage, Spiral } from "../../assets/assets";
 
 const Banner = () => {
   return (
-    <div className="bg-accent3 lg:h-[389px] flex container items-center lg:mb-24 mb-12">
+    <div className="bg-accent3 h-[70vh] lg:h-[389px] flex lg:container  items-center lg:mb-24 mb-12">
       <span className="w-[36px] h-full">
-        <img src={Spiral} alt="" className="object-contain object-left-top w-full h-full" />
+        <img
+          src={Spiral}
+          alt=""
+          className="object-cover object-left-top w-full h-full"
+        />
       </span>
       <div className="p-4 lg:p-8 w-full h-full flex flex-col">
         <h4 className="text-primary">
@@ -19,7 +23,10 @@ const Banner = () => {
               modi cupiditate blanditiis optio? Autem.
             </p>
             <h4 className="text-primary alt-h ">+91 98765xxxxx</h4>
-            <Button onClick={() => console.log("Hello")} styleType="solid">
+            <Button
+              onClick={() => (window.location.href = `tel:${phoneNumber}`)}
+              styleType="solid"
+            >
               Call Now
             </Button>
           </div>
@@ -27,7 +34,7 @@ const Banner = () => {
             <img
               src={BannerImage}
               alt=""
-              className="object-contain object-center h-full w-full"
+              className="object-cover object-center h-full w-full"
             />
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Button from "../Button/Button";
-import { Logo } from "../../assets/assets";
+import Input from "../../components/Input/Input";
+import { Logo, phoneNumber, mail } from "../../assets/assets";
 import {
   FaSquareFacebook,
   FaLinkedinIn,
@@ -9,10 +10,10 @@ import {
 } from "react-icons/fa6";
 
 const Footer = () => {
-  const accent = "#E26E1E";
+  const accent = "#1D1C30";
   return (
     <div className="container flex flex-col gap-4 py-4 justify-between">
-      <div className="grid grid-cols-3 gap-4 justify-between">
+      <div className="grid lg:grid-cols-3 gap-4 items-center lg:place-items-center">
         <div className="flex flex-col gap-2">
           <a href="#" className="flex items-center ml-2">
             <img
@@ -32,20 +33,20 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-2 w-1/2">
+        <div className="grid gap-2">
           <address className="flex flex-col">
-            <a href="tel:+919507207645">+91 9507207645</a>
-            <a href="mailto:contact@uavhelpline.com">contact@uavhelpline.com</a>
+            <a href={`tel:${phoneNumber}`} className="hover:text-accent">+91 9507207645</a>
+            <a href={`mailto:${mail}`}>contact@uavhelpline.com</a>
           </address>
           <Button
             styleType="solid"
-            onClick={() => console.log("get in touch footer")}
+            onClick={() => (window.location.href = `tel:${phoneNumber}`)}
           >
             Get in touch
           </Button>
         </div>
 
-        <ul className="self-center">
+        <ul className="self-center grid grid-cols-2 lg:grid-cols-1 ">
           <li>
             <a href="#" className="text-lg">
               Home
@@ -74,7 +75,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div className="flex items-end gap-4 justify-between">
+      <div className="flex flex-col-reverse items-center lg:flex-row gap-4 justify-between">
         <div className="">
           <p className="text-xs">
             UAV helpline is a not-for-profit organization. c2024 UAV Helpline.
@@ -126,7 +127,7 @@ const Footer = () => {
         </div>
 
         <div className="">
-          {/* <Input  label="Enter your email..." />{" "} */}
+          <Input label="Enter your email..." />{" "}
           <Button styleType="solid" onClick={() => console.log("subscribed")}>
             Subscribe
           </Button>

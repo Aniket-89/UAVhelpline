@@ -113,7 +113,6 @@ const Index = () => {
         </div>
       </div>
 
-      <Banner></Banner>
     </div>
   );
 };
