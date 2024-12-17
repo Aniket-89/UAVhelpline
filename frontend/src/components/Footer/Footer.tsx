@@ -1,4 +1,5 @@
 import Button from "../Button/Button";
+import { Logo } from "../../assets/assets";
 import {
   FaSquareFacebook,
   FaLinkedinIn,
@@ -15,7 +16,7 @@ const Footer = () => {
         <div className="flex flex-col gap-2">
           <a href="#" className="flex items-center ml-2">
             <img
-              src="src/assets/logo.png"
+              src={Logo}
               height={120}
               width={120}
               alt="uav helpline"

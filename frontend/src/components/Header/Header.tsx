@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "../Button/Button";
+import { Logo } from "../../assets/assets";
 import { FaHamburger, FaCross } from "react-icons/fa";
 
 const Header = () => {
@@ -12,7 +13,7 @@ const Header = () => {
       <div className="lg:hidden flex justify-between items-start">
         <a href="#" className="flex items-center ml-2">
           <img
-            src="src/assets/logo.png"
+            src={Logo}
             height={60}
             width={60}
             alt="uav helpline"
@@ -77,7 +78,7 @@ const Header = () => {
       <div className="container lg:flex hidden justify-between items-center h-[92px]">
         <a href="#" className="flex items-center">
           <img
-            src="src/assets/logo.png"
+            src={Logo}
             height={92}
             width={92}
             alt="uav helpline"

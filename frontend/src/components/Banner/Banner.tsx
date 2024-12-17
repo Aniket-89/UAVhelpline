@@ -1,10 +1,11 @@
 import Button from "../Button/Button";
+import { BannerImage, Spiral } from "../../assets/assets";
 
 const Banner = () => {
   return (
     <div className="bg-accent3 lg:h-[389px] flex container items-center lg:mb-24 mb-12">
       <span className="w-[36px] h-full">
-        <img src="src/assets/spiral.svg" alt="" className="object-contain object-left-top w-full h-full" />
+        <img src={Spiral} alt="" className="object-contain object-left-top w-full h-full" />
       </span>
       <div className="p-4 lg:p-8 w-full h-full flex flex-col">
         <h4 className="text-primary">
@@ -24,7 +25,7 @@ const Banner = () => {
           </div>
           <div className="bg-accent2 lg:block h-80 md:-mb-24 -mb-12 overflow-hidden">
             <img
-              src="src/assets/logo.png"
+              src={BannerImage}
               alt=""
               className="object-contain object-center h-full w-full"
             />

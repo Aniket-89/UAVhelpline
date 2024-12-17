@@ -1,7 +1,35 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
-}
+    "compilerOptions": {
+      "target": "ESNext",                      // Transpile to the latest ECMAScript version
+      "module": "ESNext",                      // Use the latest module system (ES modules)
+      "moduleResolution": "Node",              // Use Node-style resolution for imports
+      "strict": true,                          // Enable strict type-checking options
+      "esModuleInterop": true,                 // Enable interoperability between CommonJS and ES modules
+      "skipLibCheck": true,                    // Skip type-checking of declaration files (for faster builds)
+      "forceConsistentCasingInFileNames": true, // Ensure consistent file casing across all files
+      "baseUrl": "src",                        // Resolve modules starting from the 'src' directory
+      "paths": {
+        "*": ["node_modules/*", "src/*"]       // Map any import to node_modules or src
+      },
+      "jsx": "react-jsx",                      // Use the new JSX transform in React 17+
+      "lib": ["dom", "esnext"],                // Include necessary libraries like DOM and ESNext
+      "skipDefaultLibCheck": true,             // Skip default lib checks for faster builds
+      "resolveJsonModule": true,               // Allow importing JSON modules
+      "noImplicitAny": true,                   // Avoid using 'any' type unless explicitly defined
+      "downlevelIteration": true,              // Enable iteration over ES6 and beyond features
+      "isolatedModules": true,                 // Isolate modules for type checking (important for JSX)
+      "allowJs": true,                         // Allow JavaScript files to be imported
+      "noUnusedLocals": true,                  // Flag unused locals
+      "noUnusedParameters": true,              // Flag unused parameters
+      "noImplicitReturns": true                // Ensure all functions have a return statement
+    },
+    "include": [
+      "src/**/*"                               // Include all TypeScript and JS files in the 'src' folder
+    ],
+    "exclude": [
+      "node_modules",                          // Exclude node_modules
+      "build",                                 // Exclude build directory
+      "dist"                                   // Exclude dist directory
+    ]
+  }
+  

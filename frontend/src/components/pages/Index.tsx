@@ -3,6 +3,7 @@ import IconCard from "../IconCard/IconCard";
 import DroneCard from "../DroneCard/DroneCard";
 import BlogCard from "../BlogCard/BlogCard";
 import Button from "../Button/Button";
+import { Logo, PillarSpiral } from "../../assets/assets";
 import IndustryCard from "../IndustryCard/IndustryCard";
 import NewsletterForm from "../NewsletterForm/NewsletterForm";
 
@@ -14,12 +15,12 @@ const Index = () => {
       <div className="bg-light container min-h-[293px] py-4 text-center mb-8 flex flex-col gap-4 justify-center">
         <h4>We can help you with...</h4>
         <div className="flex flex-wrap gap-2 justify-evenly px-4 mb-4">
-          <IconCard src={"src/assets/logo.png"}>Drone Insurance</IconCard>
-          <IconCard src={"src/assets/logo.png"}>Drone Loan</IconCard>
-          <IconCard src={"src/assets/logo.png"}>Buy Drones</IconCard>
-          <IconCard src={"src/assets/logo.png"}>Buy Drone parts</IconCard>
-          <IconCard src={"src/assets/logo.png"}>Drone Training</IconCard>
-          <IconCard src={"src/assets/logo.png"}>Pilot Jobs</IconCard>
+          <IconCard src={Logo}>Drone Insurance</IconCard>
+          <IconCard src={Logo}>Drone Loan</IconCard>
+          <IconCard src={Logo}>Buy Drones</IconCard>
+          <IconCard src={Logo}>Buy Drone parts</IconCard>
+          <IconCard src={Logo}>Drone Training</IconCard>
+          <IconCard src={Logo}>Pilot Jobs</IconCard>
         </div>
       </div>
 
@@ -81,7 +82,7 @@ const Index = () => {
       <div className="relative lg:mb-40 mb-10 py-4">
         <span className="absolute bg-accent z-[-1] top-0 right-0 h-full w-full">
           <img
-            src="src/assets/pillar-pattern-orange.svg"
+            src={PillarSpiral}
             alt=""
             className="h-full w-full object-cover"
           />
