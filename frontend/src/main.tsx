@@ -44,7 +44,7 @@ const router = createBrowserRouter([
 const aosOptions: AosOptions = {
     duration: 500,
     once: true,
-    offset: 500,
+    offset: 100,
     easing: "ease-in-out",
 };
 

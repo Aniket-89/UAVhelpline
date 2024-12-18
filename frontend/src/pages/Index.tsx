@@ -55,7 +55,7 @@ const INDUSTRY_CARDS = [
 const Index = () => {
   const HelpServicesSection = () => (
     <div className="bg-gray rounded-sm container min-h-[293px] py-8 text-center my-16 flex flex-col gap-4 justify-center">
-      <h4 className="text-primary leading-snug">What we can you with today</h4>
+      <h4 className="text-primary leading-snug">What we can help you with</h4>
       <div className="flex flex-wrap gap-2 justify-evenly px-4 mb-4">
         {HELP_SERVICES.map(({ icon, label }) => (
           <IconCard key={label} src={icon}>
@@ -150,7 +150,7 @@ const Index = () => {
   );
 
   return (
-    <div className="flex flex-col justify-between gap-24 overflow-hidden">
+    <div className="flex flex-col justify-between xl:gap-28 lg:gap-24 gap-16 md:gap-20 overflow-hidden">
       <Banner />
       <BlogSection />
       <IndustrySection />

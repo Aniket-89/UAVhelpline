@@ -15,6 +15,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
+      data-aos={`${styleType === "outline" ? "fade-in" : ""}`}
       onClick={onClick}
       className={`group transition-colors duration-300 ${
         height ? `h-[${height}]` : "" // Apply dynamic height if provided

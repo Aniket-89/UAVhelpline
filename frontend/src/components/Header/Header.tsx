@@ -95,7 +95,7 @@ const Header = () => {
   );
 
   return (
-    <header className="z-50 sticky top-0 bg-primary border-b-[1px] border-b-primary">
+    <header className="z-50 sticky top-0 bg-primary shadow-sm">
       {/* Mobile Header */}
       <div className="lg:hidden flex justify-between items-start">
         <LogoAndTitle isMobile={true} />

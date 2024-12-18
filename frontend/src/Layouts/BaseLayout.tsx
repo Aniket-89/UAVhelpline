@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom"
 
 const BaseLayout = () => {
   return (
-    <div className="flex flex-col justify-between gap-16">
+    <div className="flex flex-col justify-between gap-20">
     <Header />
     <main className="flex-1 flex-grow">
 

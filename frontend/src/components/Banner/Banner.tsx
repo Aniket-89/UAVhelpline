@@ -1,6 +1,7 @@
 import Button from "../Button/Button";
 import { phoneNumber, BannerImage } from "../../assets/assets";
 
+
 const Banner = () => {
   return (
     <div className="bg-royal flex lg:h-[389px] md:h-[364px] sm:h-[58vh] w-full mb-24">
