@@ -12,6 +12,10 @@ import {
 } from "react-icons/fa6";
 import { NavLink, NavLinkProps } from "react-router-dom";
 
+const accent= '#E26E1E'; // Default primary color
+const accent3= '#1D1C30';
+
+
 const NAVIGATION_LINKS = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
@@ -88,7 +92,7 @@ const Header = () => {
     <div className="flex gap-4 justify-center mb-2">
       {SOCIAL_LINKS.map(({ Icon, href }) => (
         <a key={href} href={href}>
-          <Icon size={32} />
+          <Icon size={32} color={accent}/>
         </a>
       ))}
     </div>
@@ -111,7 +115,7 @@ const Header = () => {
             {isMobileMenuOpen ? (
               <ImCross size={24} />
             ) : (
-              <RxHamburgerMenu size={24} />
+              <RxHamburgerMenu size={24} color={accent3} />
             )}
           </button>
           <Button height={"60px"} styleType="solid" onClick={handleGetInTouch}>

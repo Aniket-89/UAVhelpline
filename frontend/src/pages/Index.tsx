@@ -90,13 +90,13 @@ const Index = () => {
 //   );
 
   const BlogSection = () => (
-    <div className="container relative flex flex-col items-center gap-8 md:gap-8 mb-32">
+    <div className="container relative flex flex-col max-h-[90vh] items-center gap-8 md:gap-8 mb-32">
       <span className="bg-light absolute md:top-14 top-6 w-lvw h-full z-[-1]"></span>
       <h3 className="mb-0 leading-none md:text-8xl text-neutral">
         Latest News & Stories
       </h3>
       <span className="h-2 w-full md:w-12 bg-accent mb-4" data-aos="fade-right"></span>
-      <div className="flex flex-col overflow-x-auto scrollbar-hide w-full md:flex-row gap-4">
+      <div className="flex flex-col overflow-auto scrollbar-hide w-full md:flex-row gap-4">
         {BLOG_CARDS.map((card, index) => (
           <BlogCard key={index} thumbnail={card.thumbnail}>
             {card.description}
