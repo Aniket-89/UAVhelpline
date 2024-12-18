@@ -23,7 +23,7 @@ const DroneCard: React.FC<DroneCardProps> = ({
       <img
         src={src}
         alt={label}
-        className="absolute inset-0 h-full w-full object-cover object-center z-[-1]"
+        className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 group-hover:rotate-1 transition-transform duration-300 ease-out object-center z-[-1]"
       />
 
       {/* Top Section */}
@@ -37,9 +37,9 @@ const DroneCard: React.FC<DroneCardProps> = ({
           href={websiteUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="opacity-0 cursor-pointer group-hover:opacity-100 transition-opacity duration-300"
         >
-          <GoArrowUpRight className="border-accent3 border-2 rounded-md size-6 text-primary" />
+          <GoArrowUpRight className="border-accent3 border-2 rounded-md size-6 text-accent" />
         </a>
       </div>
 
@@ -57,8 +57,8 @@ const DroneCard: React.FC<DroneCardProps> = ({
             </div>
 
             {/* Content */}
-            <h6 className="leading-tight mb-1">{label}</h6>
-            <p className="bg-light bg-opacity-20">{children}</p>
+            <h6 className="leading-tight mb-1 text-primary">{label}</h6>
+            <p className="group-hover:bg-light group-hover:bg-opacity-20 transition-opacity duration-500 ease-in-out text-light">{children}</p>
           </div>
         </div>
       </div>

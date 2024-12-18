@@ -44,8 +44,8 @@ const Footer = () => {
       <Link to="/" className="flex items-center ml-2">
         <img
           src={Logo}
-          height={120}
-          width={120}
+          height={100}
+          width={100}
           alt="uav helpline"
         />
         <span className="text-5xl font-bold text-accent font-sans">
@@ -62,11 +62,11 @@ const Footer = () => {
   const ContactSection = () => (
     <div className="grid gap-2">
       <address className="flex flex-col">
-        <a href={`tel:${phoneNumber}`} className="hover:text-accent">+91 9507207645</a>
+        <a href={`tel:${phoneNumber}`} >+91 9507207645</a>
         <a href={`mailto:${mail}`}>contact@uavhelpline.com</a>
       </address>
       <Button
-        styleType="solid"
+        styleType="outline"
         onClick={handleGetInTouch}
       >
         Get in touch

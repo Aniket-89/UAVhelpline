@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-    #root {
-        @apply flex flex-col;
-    }
   body {
     @apply text-neutral bg-white font-sans min-h-[100vh] transition-colors duration-300; /* Default text color, background, and font */
+    scrollbar-width: none;
+    
   }
 
   h1 {
@@ -47,7 +46,7 @@
   }
 
   a {
-    @apply text-accent3 text-lg hover:text-accent;
+    @apply text-accent3 text-lg hover:text-accent2;
   }
 
   input {

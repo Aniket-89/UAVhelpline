@@ -26,6 +26,12 @@ export default {
                 primary: '#FEFFFE', // Secondary color
                 neutral: '#080115', // Neutral text
                 light: '#F9F7F5',
+                gray: '#4c8077',
+            },
+            backgroundImage: {
+                'royal': 'linear-gradient(to right, #141E30, #243B55)', // Custom gradient
+                'purple-pink': 'linear-gradient(to right, #a18cd1, #fbc2eb)',     // Example 2
+                'orange-teal': 'linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb)',
             },
             fontSize: {
                 '8xl': '5.625rem',
@@ -42,5 +48,17 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        function ({ addUtilities }) {
+            addUtilities({
+                ".scrollbar-hide": {
+                    "-ms-overflow-style": "none", /* For IE and Edge */
+                    "scrollbar-width": "none", /* For Firefox */
+                },
+                ".scrollbar-hide::-webkit-scrollbar": {
+                    display: "none", /* For Chrome, Safari, and Edge */
+                },
+            });
+        },
+    ],
 }

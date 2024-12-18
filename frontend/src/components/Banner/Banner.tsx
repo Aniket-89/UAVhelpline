@@ -1,17 +1,12 @@
 import Button from "../Button/Button";
-import { phoneNumber, BannerImage, Spiral } from "../../assets/assets";
+import { phoneNumber, BannerImage } from "../../assets/assets";
 
 const Banner = () => {
   return (
-    <div className="bg-accent3 h-[70vh] lg:h-[389px] flex mx-auto max-w-7xl md:w-[90%] items-center mb-24">
-      <span className="w-[36px] h-full">
-        <img
-          src={Spiral}
-          alt=""
-          className="object-cover object-left-top w-full h-full"
-        />
-      </span>
-      <div className="p-4 lg:p-8 w-full h-full flex flex-col">
+    <div className="bg-royal flex lg:h-[389px] md:h-[364px] sm:h-[58vh] w-full mb-24">
+        <div className="flex mx-auto items-center container">
+
+      <div className="p-4 lg:px-0 lg:py-8 w-full h-full flex flex-col">
         <h4 className="text-primary">
           World's Best Hotline for Everything UAV
         </h4>
@@ -37,6 +32,7 @@ const Banner = () => {
               className="object-cover object-center h-full w-full"
             />
           </div>
+        </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import AOS, { AosOptions } from "aos";
+import "aos/dist/aos.css";
 import Index from "./pages/Index";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotFound from "./pages/NotFound";
@@ -38,6 +40,15 @@ const router = createBrowserRouter([
     ]
   },
 ]);
+
+const aosOptions: AosOptions = {
+    duration: 500,
+    once: true,
+    offset: 500,
+    easing: "ease-in-out",
+};
+
+AOS.init(aosOptions);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
