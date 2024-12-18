@@ -90,7 +90,7 @@ const Footer = () => {
     <div className="flex gap-4 mb-2">
       {SOCIAL_LINKS.map(({ Icon, href }) => (
         <a key={href} href={href}>
-          <Icon color={accent} size={32} />
+          <Icon color={accent} size={32} className='hover:-translate-y-2 transition-transform duration-200 ease-in'/>
         </a>
       ))}
     </div>
