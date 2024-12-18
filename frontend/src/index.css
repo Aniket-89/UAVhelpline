@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+    #root {
+        @apply flex flex-col;
+    }
   body {
     @apply text-neutral bg-white font-sans min-h-[100vh] transition-colors duration-300; /* Default text color, background, and font */
   }

@@ -17,7 +17,7 @@ const IndustryCard: React.FC<IndustryCardProps> = ({ label, mar=false, src }) =>
       }`}
     >
         <img src={ArrowDown} alt="" className="absolute hidden lg:block opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 bottom-[90%]"/>
-        <img src={src} alt="" className="absolute z-[-1] top-0 left-0 h-full w-full object-cover" />
+        <img src={src} alt="" className="absolute hidden lg:block z-[-1] top-0 left-0 h-full w-full object-cover" />
       <GiWheat
         color="green"
         size={48}
