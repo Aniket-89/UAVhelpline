@@ -39,7 +39,7 @@ const Header = () => {
     window.location.href = `tel:${phoneNumber}`;
   };
 
-  const LogoAndTitle = ({ isMobile }: { isMobile: boolean }) => (
+  const LogoAndTitle = ({ isMobile = false }: { isMobile: boolean }) => (
     <a href="#" className="flex items-center">
       <img
         src={Logo}
@@ -130,7 +130,7 @@ const Header = () => {
 
       {/* Desktop Header */}
       <div className="container lg:flex hidden justify-between items-center h-[92px]">
-        <LogoAndTitle isMobile={true} />
+        <LogoAndTitle isMobile={false} />
         <div className="flex items-center text-lg gap-12">
           <NavigationLinks />
           <Button styleType={"solid"} onClick={handleGetInTouch}>
