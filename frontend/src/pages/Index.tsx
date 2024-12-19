@@ -142,7 +142,7 @@ const Index = () => {
       <span className="w-4 mt-6 bg-accent" data-aos="fade-down" data-aos-duration="500"></span>
       <div className="flex flex-col">
         <h3 className="text-neutral font-bold" data-aos="fade-in">
-          Stay informed. Sign up for our mailing list.
+          Sign up for our mailing list.
         </h3>
         <NewsletterForm />
       </div>

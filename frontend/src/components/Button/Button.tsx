@@ -17,11 +17,11 @@ const Button: React.FC<ButtonProps> = ({
     <button
       data-aos={`${styleType === "outline" ? "fade-in" : ""}`}
       onClick={onClick}
-      className={`group transition-colors duration-300 ease-in-out ${
+      className={`group transition-all duration-300 ease-in-out ${
         height ? `h-[${height}]` : "" // Apply dynamic height if provided
       } ${
         styleType === "outline"
-          ? "bg-transparent border-2 text-accent hover:text-primary hover:bg-accent border-accent inset-0 "
+          ? "bg-transparent border-2 text-accent hover:text-primary hover:bg-accent border-accent"
           : "hover:text-neutral"
       }`}
     >

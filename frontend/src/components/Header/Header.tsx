@@ -92,7 +92,7 @@ const Header = () => {
     <div className="flex gap-4 justify-center mb-2">
       {SOCIAL_LINKS.map(({ Icon, href }) => (
         <a key={href} href={href}>
-          <Icon size={32} color={accent}/>
+          <Icon size={32} color={accent} className="hover:-translate-y-2 transition-transform duration-200 ease-in"/>
         </a>
       ))}
     </div>
