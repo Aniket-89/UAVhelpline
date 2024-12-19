@@ -59,13 +59,20 @@ const Footer = () => {
 
   const ContactSection = () => (
     <div className="grid gap-2 md:w-fit w-full">
-      <address className="flex flex-col gap-1">
-        <a href={`tel:${phoneNumber}`} className="flex gap-2 items-center"><IoCallSharp color="green" />{phoneNumber}</a>
-        <a href={`mailto:${mail}`} className="flex gap-2 items-center"><IoIosMail color="brown" />contact@uavhelpline.com</a>
+      <address className="flex flex-col gap-1 font-medium">
+        <a href={`tel:${phoneNumber}`} className="flex gap-2 items-center">
+          <IoCallSharp color="green" />
+          {phoneNumber}
+        </a>
+        <a href={`mailto:${mail}`} className="flex gap-2 items-center">
+          <IoIosMail color="brown" />
+          contact@uavhelpline.com
+        </a>
         <div className="my-2">
-
-        <span className="flex gap-2"><LuMapPin color="red"/> 7272 Greenville Ave</span>
-        <span>New Delhi, ND 123456</span>
+          <span className="flex gap-2">
+            <LuMapPin color="red" /> 7272 Greenville Ave
+          </span>
+          <span>New Delhi, ND 123456</span>
         </div>
       </address>
       <Button styleType="outline" onClick={handleGetInTouch}>
@@ -78,7 +85,7 @@ const Footer = () => {
     <ul className="grid grid-cols-2 gap-1 lg:grid-cols-1 ml-4">
       {NAVIGATION_LINKS.map(({ href, label }) => (
         <li key={href}>
-          <Link to={href} className="text-lg">
+          <Link to={href} className="md:text-lg text-xl font-medium">
             {label}
           </Link>
         </li>
@@ -87,7 +94,7 @@ const Footer = () => {
   );
 
   const SocialLinks = () => (
-    <div className="flex gap-4 md:py-8 border-y border-light w-full justify-center">
+    <div className="flex gap-4 justify-center">
       {SOCIAL_LINKS.map(({ Icon, href }) => (
         <a key={href} href={href}>
           <Icon
@@ -125,23 +132,23 @@ const Footer = () => {
   );
 
   return (
-    <div className="flex flex-col gap-10 py-4 justify-between">
-      <div className="container grid lg:grid-cols-3 gap-10 items-start place-items-center">
+    <div className="flex flex-col gap-10 py-16 justify-between bg-light">
+      <div className="container grid lg:grid-cols-3 gap-10 items-start lg:place-items-center">
         <div className="space-y-8">
           <LogoSection />
         </div>
-          <ContactSection />
-        <div className="grid gap-4">
+        <ContactSection />
 
         <NavigationLinks />
-        <NewsletterSection />
-        </div>
       </div>
       <div className="flex flex-col items-center gap-4 justify-between">
-        <SocialLinks />
+        <div className="container md:py-8 border-y border-primary items-center flex flex-col gap-12 md:flex-row justify-between w-full">
+          <SocialLinks />
+          <NewsletterSection />
+        </div>
         <div>
           <LegalLinks />
-          <p className="text-xs">
+          <p className="text-xs text-center">
             UAV helpline is a not-for-profit organization. c2024 UAV Helpline.
             All rights reserved
           </p>

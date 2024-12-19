@@ -63,7 +63,7 @@ const Header = () => {
 
   const NavigationLinks = ({ isMobile = false }) => {
     const linkClasses = isMobile
-      ? "block text-accent3 font-medium focus:text-accent2 alt-h"
+      ? "block text-light font-medium focus:text-accent2 alt-h"
       : "";
 
     return (
@@ -101,7 +101,7 @@ const Header = () => {
   return (
     <header className="z-50 sticky top-0 bg-primary shadow-sm">
       {/* Mobile Header */}
-      <div className="lg:hidden flex justify-between items-start">
+      <div className="lg:hidden flex justify-between bg-primary items-start">
         <LogoAndTitle isMobile={true} />
         <div className="flex items-center h-[60px]">
           <button
@@ -125,12 +125,10 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu (overlay) */}
-      {isMobileMenuOpen && (
-        <nav className="lg:hidden absolute top-[92] z-10 left-0 w-full flex flex-col justify-between gap-8 bg-primary shadow-md">
+        <nav className={`lg:hidden absolute top-[92] z-[-1] ${isMobileMenuOpen ? '-translate-y-0' : '-translate-y-[120%]' } transition-transform duration-200 ease-in-out left-0 w-full flex flex-col justify-between gap-8 py-8 bg-accent3 shadow-md`}>
           <NavigationLinks isMobile={true} />
           <SocialLinks />
         </nav>
-      )}
 
       {/* Desktop Header */}
       <div className="container lg:flex hidden justify-between items-center h-[92px]">
