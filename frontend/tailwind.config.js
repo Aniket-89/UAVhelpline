@@ -23,6 +23,7 @@ export default {
                 accent: '#E26E1E', // Default primary color
                 accent2: '#F4B223',
                 accent3: '#1D1C30',
+                accent4: '#2980B9',
                 primary: '#FEFFFE', // Secondary color
                 neutral: '#080115', // Neutral text
                 light: '#F9F7F5',
@@ -30,7 +31,7 @@ export default {
             },
             backgroundImage: {
                 'royal': 'linear-gradient(to right, #141E30, #243B55)', // Custom gradient
-                'purple-pink': 'linear-gradient(to right, #a18cd1, #fbc2eb)',     // Example 2
+                'blue-white': 'linear-gradient(to right, #2980B9, #6DD5FA, #FFFFFF)',     // Example 2
                 'orange-teal': 'linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb)',
             },
             fontSize: {

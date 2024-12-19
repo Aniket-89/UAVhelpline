@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
-import Input from "../../components/Input/Input";
+import NewsletterSection from "../NewsletterSection/NewsletterSection";
 import { IoCallSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import { LuMapPin } from "react-icons/lu";
@@ -36,8 +36,6 @@ const LEGAL_LINKS = [
 ];
 
 const Footer = () => {
-  const accent = "#1D1C30";
-
   const handleGetInTouch = () => {
     window.location.href = `tel:${phoneNumber}`;
   };
@@ -96,23 +94,17 @@ const Footer = () => {
   const SocialLinks = () => (
     <div className="flex gap-4 justify-center">
       {SOCIAL_LINKS.map(({ Icon, href }) => (
-        <a key={href} href={href}>
+        <a
+          key={href}
+          href={href}
+          className="bg-accent bg-opacity-85 rounded-full p-[6px]"
+        >
           <Icon
-            color={accent}
-            size={32}
-            className="hover:-translate-y-2 transition-transform duration-200 ease-in"
+            size={30}
+            className="hover:-translate-y-3 text-primary hover:text-accent3 transition-all duration-200 ease-in"
           />
         </a>
       ))}
-    </div>
-  );
-
-  const NewsletterSection = () => (
-    <div className="space-x-2">
-      <Input label="Enter your email..." />
-      <Button styleType="solid" onClick={() => console.log("subscribed")}>
-        Subscribe
-      </Button>
     </div>
   );
 
@@ -132,7 +124,7 @@ const Footer = () => {
   );
 
   return (
-    <div className="flex flex-col gap-10 py-16 justify-between bg-light">
+    <div className="flex flex-col gap-10 md:py-16 py-6 justify-between bg-light">
       <div className="container grid lg:grid-cols-3 gap-10 items-start lg:place-items-center">
         <div className="space-y-8">
           <LogoSection />
@@ -142,15 +134,17 @@ const Footer = () => {
         <NavigationLinks />
       </div>
       <div className="flex flex-col items-center gap-4 justify-between">
-        <div className="container md:py-8 border-y border-primary items-center flex flex-col gap-12 md:flex-row justify-between w-full">
-          <SocialLinks />
-          <NewsletterSection />
+        <div className=" border-y border-primary w-full">
+          <div className="container md:py-8 items-center flex flex-col gap-12 md:flex-row justify-between w-full">
+            <SocialLinks />
+            <NewsletterSection />
+          </div>
         </div>
         <div>
           <LegalLinks />
           <p className="text-xs text-center">
-            UAV helpline is a not-for-profit organization. c2024 UAV Helpline.
-            All rights reserved
+            UAV helpline is a not-for-profit organization. &copy;2024 UAV
+            Helpline. All rights reserved
           </p>
         </div>
       </div>

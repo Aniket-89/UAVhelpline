@@ -11,10 +11,7 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import { NavLink, NavLinkProps } from "react-router-dom";
-
-const accent= '#E26E1E'; // Default primary color
-const accent3= '#1D1C30';
-
+import NewsletterSection from "../NewsletterSection/NewsletterSection";
 
 const NAVIGATION_LINKS = [
   { to: "/", label: "Home" },
@@ -70,7 +67,7 @@ const Header = () => {
       <ul
         className={
           isMobile
-            ? "flex flex-col space-y-2 p-4 font-serif alt-h"
+            ? "flex flex-col space-y-2 p-4 font-serif alt-h w-full"
             : "space-x-12"
         }
       >
@@ -92,7 +89,11 @@ const Header = () => {
     <div className="flex gap-4 justify-center mb-2">
       {SOCIAL_LINKS.map(({ Icon, href }) => (
         <a key={href} href={href}>
-          <Icon size={32} color={accent} className="hover:-translate-y-2 transition-transform duration-200 ease-in"/>
+          <Icon
+            size={32}
+            color="white"
+            className="hover:-translate-y-2 transition-transform duration-200 ease-in"
+          />
         </a>
       ))}
     </div>
@@ -115,7 +116,7 @@ const Header = () => {
             {isMobileMenuOpen ? (
               <ImCross size={24} />
             ) : (
-              <RxHamburgerMenu size={24} color={accent3} />
+              <RxHamburgerMenu size={24} className="text-slate-600" />
             )}
           </button>
           <Button height={"60px"} styleType="solid" onClick={handleGetInTouch}>
@@ -125,10 +126,15 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu (overlay) */}
-        <nav className={`lg:hidden absolute top-[92] z-[-1] ${isMobileMenuOpen ? '-translate-y-0' : '-translate-y-[120%]' } transition-transform duration-200 ease-in-out left-0 w-full flex flex-col justify-between gap-8 py-8 bg-accent3 shadow-md`}>
-          <NavigationLinks isMobile={true} />
-          <SocialLinks />
-        </nav>
+      <nav
+        className={`lg:hidden absolute top-[92] z-[-1] ${
+          isMobileMenuOpen ? "-translate-y-0" : "-translate-y-[120%]"
+        } transition-transform duration-300 ease-in-out left-0 w-full flex flex-col justify-between gap-8 py-8 items-center bg-accent3 shadow-md`}
+      >
+        <NavigationLinks isMobile={true} />
+        <NewsletterSection />
+        <SocialLinks />
+      </nav>
 
       {/* Desktop Header */}
       <div className="container lg:flex hidden justify-between items-center h-[92px]">

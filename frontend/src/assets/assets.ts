@@ -17,9 +17,10 @@ import DroneIcon from "./drone.png";
 import PilotIcon from "./pilot.png";
 import TrainingIcon from "./training.png";
 import PropellerIcon from "./propeller.png";
+import AboutBannnerImage from "./about-banner.png";
 
 
 const phoneNumber = '+919507207645';
 const mail = 'contact@uavhelpline.com';
 
-export { ArrowDown, ShieldIcon, MoneyBagIcon, DroneIcon, PropellerIcon, TrainingIcon, PilotIcon, DaDrone, DaLogo, BannerImage, phoneNumber, mail, Spiral, Logo, PillarSpiral, VtolImage, AgriImage, TrainingImage, VideoImage, MappingImage, SurveillanceImage }
+export { ArrowDown, ShieldIcon, MoneyBagIcon, AboutBannnerImage, DroneIcon, PropellerIcon, TrainingIcon, PilotIcon, DaDrone, DaLogo, BannerImage, phoneNumber, mail, Spiral, Logo, PillarSpiral, VtolImage, AgriImage, TrainingImage, VideoImage, MappingImage, SurveillanceImage }
