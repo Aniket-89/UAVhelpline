@@ -23,4 +23,85 @@ import AboutBannnerImage from "./about-banner.png";
 const phoneNumber = '+919507207645';
 const mail = 'contact@uavhelpline.com';
 
-export { ArrowDown, ShieldIcon, MoneyBagIcon, AboutBannnerImage, DroneIcon, PropellerIcon, TrainingIcon, PilotIcon, DaDrone, DaLogo, BannerImage, phoneNumber, mail, Spiral, Logo, PillarSpiral, VtolImage, AgriImage, TrainingImage, VideoImage, MappingImage, SurveillanceImage }
+const companies = [
+    {
+      id: 1,
+      name: "Drone Anatomy",
+      category: "Agri Drone Manufacturer",
+      logo: DaLogo,
+      landingPage: "#",
+    },
+    {
+      id: 2,
+      name: "XYZ",
+      category: "Services Company",
+      logo: DaLogo,
+      landingPage: "#",
+    },
+    {
+      id: 3,
+      name: "ABC",
+      category: "Training Institutes",
+      logo: DaLogo,
+      landingPage: "#",
+    },
+    {
+      id: 4,
+      name: "DEF",
+      category: "Drone Insurance",
+      logo: DaLogo,
+      landingPage: "#",
+    },
+    {
+      id: 5,
+      name: "MNO",
+      category: "Agri Drone Manufacturer",
+      logo: DaLogo,
+      landingPage: "#",
+    },
+    {
+      id: 6,
+      name: "MNO",
+      category: "Agri Drone Manufacturer",
+      logo: DaLogo,
+      landingPage: "#",
+    },
+    {
+      id: 7,
+      name: "MNO",
+      category: "Agri Drone Manufacturer",
+      logo: DaLogo,
+      landingPage: "#",
+    },
+    {
+      id: 8,
+      name: "MNO",
+      category: "Agri Drone Manufacturer",
+      logo: DaLogo,
+      landingPage: "#",
+    },
+    {
+      id: 9,
+      name: "MNO",
+      category: "Agri Drone Manufacturer",
+      logo: DaLogo,
+      landingPage: "#",
+    },
+    {
+      id: 10,
+      name: "MNO",
+      category: "Agri Drone Manufacturer",
+      logo: DaLogo,
+      landingPage: "#",
+    },
+    {
+      id: 11,
+      name: "MNO",
+      category: "Agri Drone Manufacturer",
+      logo: DaLogo,
+      landingPage: "#",
+    },
+    // Add more companies as needed
+  ];
+
+export { ArrowDown, companies, ShieldIcon, MoneyBagIcon, AboutBannnerImage, DroneIcon, PropellerIcon, TrainingIcon, PilotIcon, DaDrone, DaLogo, BannerImage, phoneNumber, mail, Spiral, Logo, PillarSpiral, VtolImage, AgriImage, TrainingImage, VideoImage, MappingImage, SurveillanceImage }

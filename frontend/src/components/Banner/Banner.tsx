@@ -33,12 +33,12 @@ const Banner = () => {
 
   
   return (
-    <div className="bg-royal flex lg:h-[412px] md:h-[364px] sm:h-[58vh] w-full mb-24">
+    <div className="bg-royal flex lg:h-[500px] md:h-[448px] sm:h-[58vh] w-full mb-24">
       <div className="flex mx-auto items-center container">
         <div className="p-4 lg:px-0 lg:py-8 w-full h-full flex flex-col">
-          <h4 className="text-primary">
+          <h3 className="text-primary leading-tight">
             World's Best Hotline for Everything UAV
-          </h4>
+          </h3>
           <div className="flex flex-col gap-6 md:flex-row justify-between">
             <div className="space-y-4">
               <p className="text-primary">
@@ -54,13 +54,13 @@ const Banner = () => {
                 Call Now
               </Button>
             </div>
-            <div className="bg-transparent relative aspect-[3/2] shadow-md shadow-light lg:block h-80 md:-mb-24 -mb-12 overflow-hidden">
+            <div className="bg-transparent relative aspect-[3/2] lg:block sm:h-72 xl:h-96 lg:h-80">
             {mockBannerImages.map((image, index) => (
                 <img
                   key={index}
                   src={image}
                   alt={`Banner slide ${index + 1}`}
-                  className={`absolute top-0 left-0 object-cover object-center h-full w-full transition-opacity duration-750 ease-in-out ${
+                  className={`absolute md:top-[20%] lg:top-[30%] left-0 object-cover object-center h-full w-full transition-opacity duration-750 ease-in-out ${
                     currentImageIndex === index ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
