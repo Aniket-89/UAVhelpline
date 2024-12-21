@@ -41,7 +41,7 @@ const Header = () => {
   };
 
   const LogoAndTitle = ({ isMobile = false }: { isMobile: boolean }) => (
-    <a href="#" className="flex items-center">
+    <a href="/" className="flex items-center">
       <img
         src={Logo}
         height={isMobile ? 60 : 92}
