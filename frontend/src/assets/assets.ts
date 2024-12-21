@@ -39,7 +39,7 @@ const companies = {
             "id": 1,
             "name": "Garuda Aerospace",
             "website": "https://www.garudaaerospace.com/",
-            "logo": "/src/assets/company-logos/ic_garuda_eco.png"
+            "logo": "./assets/company-logos/ic_garuda_eco.png"
         },
         {
             "id": 2,
