@@ -103,7 +103,7 @@ const Index = () => {
           </BlogCard>
         ))}
       </div>
-      <Button styleType="outline" onClick={() => console.log("")}>
+      <Button styleType="outline" onClick={() => window.location.href = '/blogs'}>
         SEE ALL STORIES
       </Button>
     </div>

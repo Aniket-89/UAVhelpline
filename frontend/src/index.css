@@ -18,7 +18,7 @@
   }
 
   h3 {
-    @apply lg:text-7xl text-5xl font-medium text-accent mb-2;
+    @apply lg:text-7xl md:text-6xl text-4xl font-medium text-accent mb-2;
   }
 
   h4 {

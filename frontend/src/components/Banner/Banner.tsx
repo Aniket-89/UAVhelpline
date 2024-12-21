@@ -33,7 +33,7 @@ const Banner = () => {
 
   
   return (
-    <div className="bg-royal flex lg:h-[500px] md:h-[448px] sm:h-[58vh] w-full mb-24">
+    <div className="bg-royal flex lg:h-[500px]  md:h-[468px] sm:h-[58vh] w-full mb-24">
       <div className="flex mx-auto items-center container">
         <div className="p-4 lg:px-0 lg:py-8 w-full h-full flex flex-col">
           <h3 className="text-primary leading-tight">
@@ -54,13 +54,13 @@ const Banner = () => {
                 Call Now
               </Button>
             </div>
-            <div className="bg-transparent relative aspect-[3/2] lg:block sm:h-72 xl:h-96 lg:h-80">
+            <div className="bg-transparent relative aspect-[3/2] lg:block sm:h-72 lg:h-96">
             {mockBannerImages.map((image, index) => (
                 <img
                   key={index}
                   src={image}
                   alt={`Banner slide ${index + 1}`}
-                  className={`absolute md:top-[20%] lg:top-[30%] left-0 object-cover object-center h-full w-full transition-opacity duration-750 ease-in-out ${
+                  className={`absolute md:top-[10%] xl:top-[20%] left-0 object-cover object-center h-full w-full transition-opacity duration-750 ease-in-out ${
                     currentImageIndex === index ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
