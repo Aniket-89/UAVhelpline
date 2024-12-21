@@ -28,6 +28,7 @@ export default {
                 neutral: '#080115', // Neutral text
                 light: '#F9F7F5',
                 gray: '#4c8077',
+                light2: '#dadcde',
             },
             backgroundImage: {
                 'royal': 'linear-gradient(to right, #141E30, #243B55)', // Custom gradient

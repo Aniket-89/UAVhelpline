@@ -10,7 +10,7 @@ const Industry = () => {
   // Flatten the companies data into a single array with category information
   const allCompanies = useMemo(() => {
     return Object.entries(companies).flatMap(([category, companyList]) =>
-      companyList.map(company => ({ ...company, category }))
+      companyList.map((company) => ({ ...company, category }))
     );
   }, []);
 
@@ -46,72 +46,79 @@ const Industry = () => {
   };
 
   return (
-    <div className="container space-y-8">
-      <h2>Drone Companies in India</h2>
+    <div className="">
+      <div className="bg-accent4 h-[400px] w-full flex items-center">
+        <h2 className="container text-primary underline">Industry Directory</h2>
+      </div>
+      <div className="container space-y-8">
+        <h2>Drone Companies in India</h2>
 
-      {/* Category Buttons */}
-      <div className="flex gap-2 flex-wrap">
-        <button
-          onClick={() => handleCategoryChange("All")}
-          className={`text-primary hover:bg-accent2 hover:text-primary ${
-            selectedCategory === "All" ? "bg-accent" : "bg-accent4"
-          }`}
-        >
-          All
-        </button>
-        {Object.keys(companies).map((category) => (
+        {/* Category Buttons */}
+        <div className="flex gap-2 flex-wrap">
           <button
-            key={category}
-            onClick={() => handleCategoryChange(category)}
+            onClick={() => handleCategoryChange("All")}
             className={`text-primary hover:bg-accent2 hover:text-primary ${
-              selectedCategory === category ? "bg-accent" : "bg-accent4"
+              selectedCategory === "All" ? "bg-accent" : "bg-accent4"
             }`}
           >
-            {category.replace(/-/g, ' ')}
+            All
           </button>
-        ))}
-      </div>
-
-      {/* Display Filtered Items */}
-      {loading ? (
-        <div className="flex justify-center items-center h-[400px] bg-light">
-          <div className="loader">Loading...</div>
-        </div>
-      ) : (
-        <ul className="flex flex-wrap bg-orange-100 p-4">
-          {visibleCompanies.map((company) => (
-            <li key={company.id} className="mx-auto p-4 ">
-              <a
-                href={company.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-fit"
-              >
-                <div className="mx-auto bg-primary border-gray hover:scale-105 transition-all duration-200 ease-in-out hover:shadow-lg border size-40 w-full">
-                  <img
-                    src={company.logo}
-                    alt={company.name}
-                    className="object-center object-contain h-full w-full"
-                  />
-                </div>
-              </a>
-              <h6 className="text-center font-normal text-lg">{company.name}</h6>
-            </li>
+          {Object.keys(companies).map((category) => (
+            <button
+              key={category}
+              onClick={() => handleCategoryChange(category)}
+              className={`py-1 px-2 text-primary text-wrap text-start hover:bg-accent2 hover:text-primary ${
+                selectedCategory === category ? "bg-accent" : "bg-accent4"
+              }`}
+            >
+              {category.replace(/-/g, " ")}
+            </button>
           ))}
-        </ul>
-      )}
-
-      {/* Load More Button */}
-      {visibleCount < filteredCompanies.length && !loading && (
-        <div className="text-center">
-          <Button
-            onClick={loadMore}
-            styleType="outline"
-          >
-            Load More
-          </Button>
         </div>
-      )}
+
+        {/* Display Filtered Items */}
+        {loading ? (
+          <div className="flex justify-center items-center h-[400px] bg-light">
+            <div className="loader">Loading...</div>
+          </div>
+        ) : (
+          <ul className="flex flex-wrap bg-light2 p-4">
+            {visibleCompanies.map((company) => (
+              <li
+                key={company.id}
+                className="mx-auto p-4 md:max-w-48 max-w-36 "
+              >
+                <a
+                  href={company.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-fit"
+                >
+                  <div className="mx-auto bg-primary border-gray hover:scale-105 transition-all duration-200 ease-in-out hover:shadow-lg border md:size-40 size-32 md:w-full">
+                    <img
+                      src={company.logo}
+                      alt={company.name}
+                      className="object-center object-contain h-full w-full"
+                    />
+                  </div>
+                </a>
+                <h6 className="text-center font-normal text-lg">
+                  {company.name}
+                </h6>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {/* Load More Button */}
+        {visibleCount < filteredCompanies.length && !loading && (
+          <div className="text-center">
+            <Button onClick={loadMore} styleType="outline">
+              Load More
+            </Button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
