@@ -75,6 +75,7 @@ const Header = () => {
           <li key={to} className={isMobile ? "" : "inline"}>
             <NavLink
               to={to}
+              onClick={isMobile ? toggleMobileMenu : undefined}
               className={isMobile ? linkClasses : getNavLinkClass}
             >
               {label}

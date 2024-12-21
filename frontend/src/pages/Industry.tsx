@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, SetStateAction } from "react";
 import { companies } from "../assets/assets";
 import Button from "../components/Button/Button";
 
@@ -37,9 +37,10 @@ const Industry = () => {
       }, 500); // Simulate loading delay
       return () => clearTimeout(timer);
     }
+    return () => {};
   }, [loading]);
 
-  const handleCategoryChange = (category) => {
+  const handleCategoryChange = (category: SetStateAction<string>) => {
     setLoading(true);
     setSelectedCategory(category);
   };
