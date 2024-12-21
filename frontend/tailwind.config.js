@@ -32,7 +32,10 @@ export default {
             },
             backgroundImage: {
                 'royal': 'linear-gradient(to right, #141E30, #243B55)', // Custom gradient
-                'blue-white': 'linear-gradient(to right, #2980B9, #6DD5FA, #FFFFFF)',     // Example 2
+                'blue-white': 'linear-gradient(to right, #2980B9, #6DD5FA, #FFFFFF)',
+                'grade-grey': 'linear-gradient(to right, #bdc3c7, #2c3e50)',
+                'margo': 'linear-gradient(to right, #FFEFBA, #FFFFFF)',
+                'zinc': 'linear-gradient(to right, #ADA996, #F2F2F2,#DBDBDB, #EAEAEA)',
                 'orange-teal': 'linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb)',
             },
             fontSize: {

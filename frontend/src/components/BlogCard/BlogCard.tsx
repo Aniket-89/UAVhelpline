@@ -7,7 +7,7 @@ type BlogCardProps = {
 
 const BlogCard: React.FC<BlogCardProps> = ({children, thumbnail}) => {
   return (
-    <div className='flex flex-row md:flex-col gap-2 justify-center min-w-[200px] items-start'>
+    <div className='flex flex-row md:flex-col gap-2 min-w-[200px] items-start'>
       <img src={thumbnail} alt="" className='w-1/2 object-cover md:w-[230px] md:aspect-square aspect-[3/2]'/>
       <p>{children}</p>
       <a href="#" className='underline hidden md:block'>Read more</a>
