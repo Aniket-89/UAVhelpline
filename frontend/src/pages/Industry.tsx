@@ -59,11 +59,11 @@ const Industry = () => {
 
   return (
     <div className="">
-      <div className="bg-accent4 h-[400px] w-full flex items-center">
+      <div className="bg-expresso h-[400px] w-full flex items-center mb-12">
         <h2 className="container text-primary underline">Industry Directory</h2>
       </div>
-      <div className="container space-y-8">
-        <h2>Drone Companies in India</h2>
+      <div className="container space-y-8 py-8">
+        <h3 className="text-neutral mb-4">Drone Companies in India</h3>
 
         {/* Category Buttons */}
         <div className="flex gap-2 flex-wrap">

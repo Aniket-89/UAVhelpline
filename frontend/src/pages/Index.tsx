@@ -108,7 +108,7 @@ const Index = () => {
 
   const NewsletterSection = () => (
     <div className="container mx-auto mb-16 flex gap-2">
-      <span className="w-4 mt-6 bg-accent" data-aos="fade-down" data-aos-duration="500"></span>
+      <span className="w-4 mt-3 bg-accent" data-aos="fade-down" data-aos-duration="500"></span>
       <div className="flex flex-col">
         <h3 className="text-neutral font-bold" data-aos="fade-in">
           Sign up for our mailing list.

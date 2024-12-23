@@ -28,7 +28,7 @@ export default {
                 neutral: '#080115', // Neutral text
                 light: '#F9F7F5',
                 gray: '#4c8077',
-                light2: '#dadcde',
+                light2: '#eeeff3',
             },
             backgroundImage: {
                 'royal': 'linear-gradient(to right, #141E30, #243B55)', // Custom gradient
@@ -36,6 +36,7 @@ export default {
                 'grade-grey': 'linear-gradient(to right, #bdc3c7, #2c3e50)',
                 'margo': 'linear-gradient(to right, #FFEFBA, #FFFFFF)',
                 'zinc': 'linear-gradient(to right, #ADA996, #F2F2F2,#DBDBDB, #EAEAEA)',
+                'expresso': 'linear-gradient(to right, #ad5389, #3c1053)',
                 'orange-teal': 'linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb)',
             },
             fontSize: {

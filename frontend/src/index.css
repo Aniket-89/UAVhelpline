@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html {
+    scrollbar-color: #080115 rgba(255, 255, 255, 0); /* Thumb color (first) and track color (second) */
+    scrollbar-width: thin; /* Options: auto, thin, none */
+  }
 @layer base {
   body {
     @apply text-neutral bg-white font-sans min-h-[100vh] transition-colors duration-300; /* Default text color, background, and font */
