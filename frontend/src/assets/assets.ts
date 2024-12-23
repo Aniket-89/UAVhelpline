@@ -624,7 +624,7 @@ const companies = {
             "logo": "./company-logos/ic_daybest.png"
         }
     ],
-    "drone-training-institute-and-rptos": [
+    "Training": [
         {
             "id": 1,
             "name": "CASR, Anna University",
@@ -704,7 +704,7 @@ const companies = {
             "logo": "./company-logos/bg_flapone.png"
         }
     ],
-    "agri-drone-manufacture": [
+    "Agriculture": [
         {
             "id": 0,
             "name": "Drone Anatomy",
@@ -2302,7 +2302,7 @@ const companies = {
             "logo": "./company-logos/ic_paras.png"
         }
     ],
-    "military-drones": [
+    "Military": [
         {
             "id": 0,
             "name": "Drone Anatomy",

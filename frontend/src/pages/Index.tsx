@@ -1,6 +1,5 @@
 import Banner from "../components/Banner/Banner";
 import IconCard from "../components/IconCard/IconCard";
-// import DroneCard from "../components/DroneCard/DroneCard";
 import BlogCard from "../components/BlogCard/BlogCard";
 import Button from "../components/Button/Button";
 import IndustryCard from "../components/IndustryCard/IndustryCard";
@@ -31,13 +30,6 @@ const HELP_SERVICES = [
   { icon: PilotIcon, label: "Pilot Jobs" },
 ];
 
-// const DRONE_CARDS = Array(3).fill({
-//   src: DaDrone,
-//   label: "Drone Anatomy P10pro",
-//   logoSrc: DaLogo,
-//   description: "Most compact agriculture drone in the market"
-// });
-
 const BLOG_CARDS = Array(10).fill({
   thumbnail: DaDrone,
   description: "India's most compact agriculture drone"
@@ -48,7 +40,7 @@ const INDUSTRY_CARDS = [
   { label: "Mapping", src: MappingImage, mar: true },
   { label: "Training", src: TrainingImage },
   { label: "VTOL", src: VtolImage, mar: true },
-  { label: "Surveillance", src: SurveillanceImage },
+  { label: "Military", src: SurveillanceImage },
   { label: "Videography", src: VideoImage, mar: true },
 ];
 
@@ -65,29 +57,6 @@ const Index = () => {
       </div>
     </div>
   );
-
-//   const DroneCardsSection = () => (
-//     <div className="container p-2 flex flex-col gap-8 md:p-0 mb-8">
-//       <div>
-//         <h4 className="leading-tight">Buy Type Certified Drones</h4>
-//         <p className="text-sm">
-//           View, Compare & Buy Drones from Indian manufacturers
-//         </p>
-//       </div>
-//       <div className="flex flex-col m-4 md:flex-row justify-evenly gap-4 items-center">
-//         {DRONE_CARDS.map((card, index) => (
-//           <DroneCard 
-//             key={index}
-//             src={card.src}
-//             label={card.label}
-//             logoSrc={card.logoSrc}
-//           >
-//             {card.description}
-//           </DroneCard>
-//         ))}
-//       </div>
-//     </div>
-//   );
 
   const BlogSection = () => (
     <div className="container relative flex flex-col max-h-[90vh] items-center gap-8 md:gap-8 mb-32">
@@ -124,7 +93,7 @@ const Index = () => {
           Explore the leaders of India's drone industry
         </h2>
       </div>
-      <div className="grid lg:grid-cols-6 md:grid-cols-2 gap-4 container justify-between">
+      <div className="grid lg:grid-cols-6 md:grid-cols-2 gap-4 justify-between w-[90%] lg:w-full max-w-7xl lg:place-items-center mx-auto">
         {INDUSTRY_CARDS.map(({ label, src, mar }) => (
           <IndustryCard 
             key={label} 

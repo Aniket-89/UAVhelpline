@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 
 const NewsletterSection = () => {
   return (
-    <div className="space-x-2">
+    <div className="flex flex-row gap-1">
       <Input label="Enter your email..." />
       <Button styleType="solid" onClick={() => console.log("subscribed")}>
         Subscribe

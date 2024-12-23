@@ -1,9 +1,16 @@
-import { useState, useMemo, useEffect, SetStateAction } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { companies } from "../assets/assets";
 import Button from "../components/Button/Button";
 
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
 const Industry = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const query = useQuery();
+  const initialCategory = query.get("category") || "All";
+  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [visibleCount, setVisibleCount] = useState(10);
   const [loading, setLoading] = useState(false);
 
@@ -37,13 +44,18 @@ const Industry = () => {
       }, 500); // Simulate loading delay
       return () => clearTimeout(timer);
     }
-    return () => {};
+    return undefined;
   }, [loading]);
 
-  const handleCategoryChange = (category: SetStateAction<string>) => {
+  const handleCategoryChange = (category: string) => {
     setLoading(true);
     setSelectedCategory(category);
   };
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="">
