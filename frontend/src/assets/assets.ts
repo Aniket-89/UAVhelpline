@@ -19,6 +19,9 @@ import TrainingIcon from "./training.png";
 import PropellerIcon from "./propeller.png";
 import AboutBannnerImage from "./about-banner.png";
 import Aviation from "./aviation.jpg";
+import SafetyImage from "./uav_inspection.jpg";
+import SustainibilityImage from "./yellow_clouds.jpg";
+import EquityAndJobsImage from "./jobs.jpg";
 
 
 const phoneNumber = '+919507207645';
@@ -26,7 +29,7 @@ const mail = 'contact@uavhelpline.com';
 
 
 
-export { ArrowDown, companies, Aviation, ShieldIcon, MoneyBagIcon, AboutBannnerImage, DroneIcon, PropellerIcon, TrainingIcon, PilotIcon, DaDrone, DaLogo, BannerImage, phoneNumber, mail, Spiral, Logo, PillarSpiral, VtolImage, AgriImage, TrainingImage, VideoImage, MappingImage, SurveillanceImage }
+export { ArrowDown, companies, SafetyImage, SustainibilityImage, EquityAndJobsImage, Aviation, ShieldIcon, MoneyBagIcon, AboutBannnerImage, DroneIcon, PropellerIcon, TrainingIcon, PilotIcon, DaDrone, DaLogo, BannerImage, phoneNumber, mail, Spiral, Logo, PillarSpiral, VtolImage, AgriImage, TrainingImage, VideoImage, MappingImage, SurveillanceImage }
 
 const companies = {
     "indian-drone-manufacturers": [

@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 
 import BaseLayout from "./Layouts/BaseLayout";
 import Index from "./pages/Index";
+import ComingSoon from "./pages/ComingSoon";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
         index: true,
         element: <Index />,
       },
+      {
+        path: "comingSoon/",
+        element: <ComingSoon />
+      }
     //   {
     //     path: "blogs/",
     //     element: <BlogList />,

@@ -6,17 +6,17 @@ import MobileMenu from "./MobileMenu";
 import SearchForm from "./SearchForm";
 
 const NAV_LINKS = [
-  { label: "About", href: "#" },
-  { label: "Jobs", href: "#" },
-  { label: "News", href: "#" },
-  { label: "Aircraft", href: "#" },
-  { label: "Air Traffic", href: "#" },
-  { label: "Airports", href: "#" },
-  { label: "Pilots & Airmen", href: "#" },
-  { label: "Data & Research", href: "#" },
-  { label: "Regulations", href: "#" },
-  { label: "Space", href: "#" },
-  { label: "Drones", href: "#" },
+  { label: "About", href: "/comingSoon"},
+  { label: "Jobs", href: "/comingSoon"},
+  { label: "News", href: "/comingSoon"},
+  { label: "Aircraft", href: "/comingSoon"},
+  { label: "Air Traffic", href: "/comingSoon"},
+  { label: "Airports", href: "/comingSoon"},
+  { label: "Pilots & Airmen", href: "/comingSoon"},
+  { label: "Data & Research", href: "/comingSoon"},
+  { label: "Regulations", href: "/comingSoon"},
+  { label: "Space", href: "/comingSoon"},
+  { label: "Drones", href: "/comingSoon"},
 ];
 
 const Header = () => {

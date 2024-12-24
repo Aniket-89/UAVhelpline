@@ -9,14 +9,14 @@ const Anouncements = () => {
             <TbDrone />
           </span>
           <span>
-            An official website of the United States government Here's how you
-            know
+            Welcome to UAV Helpline - Your Trusted Source for Drone Information
+            and Assistance
           </span>
         </div>
       </div>
       <div className="container flex gap-1 text-white text-sm p-[6px]">
-<span></span>
-        United States Department of Transportation
+        <span></span>
+        Contact us at: 1-800-376-6345
       </div>
     </>
   );

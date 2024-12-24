@@ -1,4 +1,5 @@
 import React from "react";
+import { IoIosMail } from "react-icons/io";
 import {
   FaSquareFacebook,
   FaLinkedinIn,
@@ -8,46 +9,45 @@ import {
 } from "react-icons/fa6";
 
 const SOCIAL_LINKS = [
-  { Icon: FaSquareFacebook, href: "#" },
-  { Icon: FaLinkedinIn, href: "#" },
-  { Icon: FaInstagram, href: "#" },
-  { Icon: FaYoutube, href: "#" },
-  { Icon: FaXTwitter, href: "#" },
+  { Icon: FaSquareFacebook, href: "https://www.instagram.com/uavhelpline/profilecard/?igsh=MXFpeXNjZmVzMjRrcA==" },
+  { Icon: FaLinkedinIn, href: "/comingSoon"},
+  { Icon: FaInstagram, href: "https://www.instagram.com/uavhelpline/profilecard/?igsh=MXFpeXNjZmVzMjRrcA==" },
+  { Icon: FaYoutube, href: "/comingSoon"},
+  { Icon: FaXTwitter, href: "/comingSoon"},
+  { Icon: IoIosMail, href: "https://www.instagram.com/uavhelpline/profilecard/?igsh=MXFpeXNjZmVzMjRrcA==" },
 ];
 
 const POLICIES_LINKS = [
-  { label: "About DOT", href: "#" },
-  { label: "Budget and Performance", href: "#" },
-  { label: "Civil Rights", href: "#" },
-  { label: "FOIA", href: "#" },
-  { label: "Information Quality", href: "#" },
-  { label: "No FEAR Act", href: "#" },
-  { label: "Office of Inspector General", href: "#" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Web Policies and Notices", href: "#" },
+  { label: "About DOT", href: "/comingSoon"},
+  { label: "Budget and Performance", href: "/comingSoon"},
+  { label: "Civil Rights", href: "/comingSoon"},
+  { label: "Information Quality", href: "/comingSoon"},
+  { label: "No FEAR Act", href: "/comingSoon"},
+  { label: "Office of Inspector General", href: "/comingSoon"},
+  { label: "Privacy Policy", href: "/comingSoon"},
+  { label: "Web Policies and Notices", href: "/comingSoon"},
 ];
 
 const LINKS = [
   {
     title: "Get Important Info/Data",
     links: [
-      { label: "Accident & Incident Data", href: "#" },
-      { label: "Airport Data & Information Portal (ADIP)", href: "#" },
-      { label: "Charting & Data", href: "#" },
-      { label: "Flight Delay Information", href: "#" },
-      { label: "Supplemental Type Certificates", href: "#" },
-      { label: "Type Certificate Data Sheets (TCDS)", href: "#" },
+      { label: "Accident & Incident Data", href: "/comingSoon"},
+      { label: "Airport Data & Information Portal (ADIP)", href: "/comingSoon"},
+      { label: "Charting & Data", href: "/comingSoon"},
+      { label: "Flight Delay Information", href: "/comingSoon"},
+      { label: "Supplemental Type Certificates", href: "/comingSoon"},
+      { label: "Type Certificate Data Sheets (TCDS)", href: "/comingSoon"},
     ],
   },
   {
     title: "Review Documents",
     links: [
-      { label: "Aircraft Handbooks & Manuals", href: "#" },
-      { label: "Airport Diagrams", href: "#" },
-      { label: "Aviation Handbooks & Manuals", href: "#" },
-      { label: "Examiner & Inspector", href: "#" },
-      { label: "FAA Guidance", href: "#" },
-      { label: "Performance Reports & Plans", href: "#" },
+      { label: "Aircraft Handbooks & Manuals", href: "/comingSoon"},
+      { label: "Airport Diagrams", href: "/comingSoon"},
+      { label: "Aviation Handbooks & Manuals", href: "/comingSoon"},
+      { label: "Examiner & Inspector", href: "/comingSoon"},
+      { label: "Performance Reports & Plans", href: "/comingSoon"},
     ],
   },
   {
@@ -57,22 +57,12 @@ const LINKS = [
         label: "Next Generation Air Transportation System (NextGen)",
         href: "#",
       },
-      { label: "NextGen Today", href: "#" },
-      { label: "NextGen Programs and Resources", href: "#" },
-      { label: "Performance Reporting and Benefits", href: "#" },
+      { label: "NextGen Today", href: "/comingSoon"},
+      { label: "NextGen Programs and Resources", href: "/comingSoon"},
+      { label: "Performance Reporting and Benefits", href: "/comingSoon"},
     ],
   },
-  {
-    title: "Visit Other FAA Sites",
-    links: [
-      { label: "Airmen Inquiry", href: "#" },
-      { label: "Airmen Online Services", href: "#" },
-      { label: "N-Number Lookup", href: "#" },
-      { label: "FAA Mobile", href: "#" },
-      { label: "FAA Safety Team", href: "#" },
-      { label: "Frequently Asked Questions", href: "#" },
-    ],
-  },
+  
 ];
 
 const SocialLinks = () => (
@@ -113,13 +103,12 @@ const Footer = () => {
   return (
     <div>
       <div className="bg-neutral2 py-16 text-white">
-        <div className="container grid lg:grid-cols-5 gap-8 sm:grid-cols-2">
+        <div className="container grid lg:grid-cols-4 gap-8 sm:grid-cols-2">
           {/* Address */}
           <address className="text-[15px] not-italic space-y-4 text-white">
-            <h4 className="font-semibold">U.S. Department of Transportation</h4>
+            <h4 className="font-semibold">UAV Helpline</h4>
             <p>
-              Federal Aviation Administration 800 Independence Avenue, SW
-              Washington, DC 20591 866.835.5322 (866-TELL-FAA)
+            Your global support for UAV guidance, safety, and regulations. We're here to help drone operators navigate the skies with confidence.
             </p>
             <a
               href="#"
