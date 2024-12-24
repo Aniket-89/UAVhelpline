@@ -6,63 +6,67 @@ export default {
     ],
     theme: {
         fontFamily: {
-            sans: ['Fira sans condensed', 'Inter', 'Arial', 'sans-serif'], // Default sans-serif font
-            serif: ['Merriweather', 'serif'], // Default serif font
+            SourceSansPro: ['Source-Sans-pro', 'sans-serif'],
+            Lato: [ "Lato", 'serif'],
+            sansSerif: ['apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", "Liberation Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"], // Default sans-serif font
+            monospace: ['SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'], // Default serif font
         },
         extend: {
             screens: {
                 xs: '480px', // Extra small devices
-                sm: '640px', // Small devices
+                sm: '576px', // Small devices
                 md: '768px', // Medium devices
-                lg: '1024px', // Large devices
-                xl: '1280px', // Extra large devices
-                '2xl': '1536px', // Double extra large devices
-                '3xl': '1920px', // Custom screen size for 4K monitors
+                lg: '992px', // Large devices
+                xl: '1200px', // Extra large devices
+                '2xl': '1366px', // Double extra large devices
+                '3xl': '1533px',
             },
             colors: {
-                accent: '#E26E1E', // Default primary color
-                accent2: '#F4B223',
-                accent3: '#1D1C30',
-                accent4: '#2980B9',
-                primary: '#FEFFFE', // Secondary color
-                neutral: '#080115', // Neutral text
-                light: '#F9F7F5',
-                gray: '#4c8077',
-                light2: '#eeeff3',
-            },
-            backgroundImage: {
-                'royal': 'linear-gradient(to right, #141E30, #243B55)', // Custom gradient
-                'blue-white': 'linear-gradient(to right, #2980B9, #6DD5FA, #FFFFFF)',
-                'grade-grey': 'linear-gradient(to right, #bdc3c7, #2c3e50)',
-                'margo': 'linear-gradient(to right, #FFEFBA, #FFFFFF)',
-                'zinc': 'linear-gradient(to right, #ADA996, #F2F2F2,#DBDBDB, #EAEAEA)',
-                'expresso': 'linear-gradient(to right, #ad5389, #3c1053)',
-                'orange-teal': 'linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb)',
-            },
-            fontSize: {
-                '8xl': '5.625rem',
-                '7xl': '4rem',
-                '5xl': '2.85rem',
-                '4xl': '2rem',
-                '2xl': '1.375rem',
-                'base': '1rem',
-                '4.2xl': '2.175rem',
-            },
-            spacing: {
-                18: '4.5rem', // Custom spacing value
-                72: '18rem',
+                blue: '#007bff', // Default primary color
+                indigo: '#6610f2',
+                purple: '#6f42c1',
+                red: '#dc3545',
+                orange: '#fd7e14',
+                green: '#28a745',
+                teal: '#20c997',
+                cyan: '#17a2b8',
+                white: '#fff',
+                gray: '#6c757d',
+                secondary: '#A8CF45',
+                yellow: '#ffc107',
+                success: '#28a745',
+                info: '#17a2b8',
+                warning: '#ffc107',
+                danger: '#dc3545',
+
+                light: '#f8f9fa',
+                lightBg: '#E1E1E1',
+                dark: '#343a40',
+                neutral: '#191F23',
+                neutral2: '#222b32',
+                bodyBg: '#192857',
+                primary: '#0071BC',
+                footerBg: '#3d4550',
+                navLink: '#18639F',
+                grayDark: '#343a40',
+                accentGold: '#B0862C',
             },
         },
     },
     plugins: [
-        function ({ addUtilities }) {
+        function ({
+            addUtilities
+        }) {
             addUtilities({
                 ".scrollbar-hide": {
-                    "-ms-overflow-style": "none", /* For IE and Edge */
-                    "scrollbar-width": "none", /* For Firefox */
+                    "-ms-overflow-style": "none",
+                    /* For IE and Edge */
+                    "scrollbar-width": "none",
+                    /* For Firefox */
                 },
                 ".scrollbar-hide::-webkit-scrollbar": {
-                    display: "none", /* For Chrome, Safari, and Edge */
+                    display: "none",
+                    /* For Chrome, Safari, and Edge */
                 },
             });
         },

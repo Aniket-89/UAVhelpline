@@ -23,18 +23,18 @@ const router = createBrowserRouter([
         path: "about/",
         element: <About />,
       },
-      {
-        path: "blogs/",
-        element: <BlogList />,
-      },
-      {
-        path: "industry-directory/",
-        element: <Industry />,
-      },
-      {
-        path: "blogs/:blogId",
-        element: <BlogDetailPage />,
-      },
+    //   {
+    //     path: "blogs/",
+    //     element: <BlogList />,
+    //   },
+    //   {
+    //     path: "industry-directory/",
+    //     element: <Industry />,
+    //   },
+    //   {
+    //     path: "blogs/:blogId",
+    //     element: <BlogDetailPage />,
+    //   },
     ],
   },
 ]);

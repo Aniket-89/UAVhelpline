@@ -1,70 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-html {
-    scrollbar-color: #080115 rgba(255, 255, 255, 0); /* Thumb color (first) and track color (second) */
-    scrollbar-width: thin; /* Options: auto, thin, none */
-  }
+@font-face {
+    font-family: 'Source-Sans-Pro';
+    src: url('/fonts/SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source-Sans-Pro';
+    src: url('/fonts/SourceSansPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
 @layer base {
-  body {
-    @apply text-neutral bg-white font-sans min-h-[100vh] transition-colors duration-300; /* Default text color, background, and font */
-    scrollbar-width: none;
-    
-  }
 
-  h1 {
-    @apply lg:text-9xl text-8xl font-bold text-neutral mb-4;
-  }
+    body {
+        @apply font-SourceSansPro bg-bodyBg text-base min-h-[100vh] transition-all duration-300;
+    }
+    a {
+        @apply text-primary text-[17px];
+    }
 
-  h2 {
-    @apply lg:text-8xl text-7xl font-semibold text-neutral mb-3;
-  }
-
-  h3 {
-    @apply lg:text-7xl md:text-6xl text-4xl font-medium text-accent mb-2;
-  }
-
-  h4 {
-    @apply lg:text-5xl text-4xl font-medium text-neutral mb-2;
-  }
-
-  h5 {
-    @apply lg:text-4xl text-2xl font-medium text-neutral mb-2;
-  }
-
-  h6 {
-    @apply lg:text-2xl text-xl font-medium text-neutral mb-2;
-  }
-
-  .alt-h {
-    @apply md:text-4.2xl text-3xl font-light text-neutral mb-2;
-  }
-
-  .alt-p {
-    @apply md:text-xl text-lg font-normal text-neutral mb-1;
-  }
-
-  p {
-    @apply text-base text-neutral leading-relaxed;
-  }
-
-  a {
-    @apply text-accent3 text-lg hover:text-accent2;
-  }
-
-  input {
-    @apply outline-none text-accent3 text-lg;
-  }
-
-  button {
-    @apply relative inline-block bg-accent text-white text-lg font-bold px-6 py-2 text-nowrap;
-  }
 }
 
 .container {
-    @apply mx-auto px-2 lg:px-0 max-w-7xl md:w-[90%];
+    @apply 2xl:max-w-[1240px] max-w-full mx-auto xl:pl-4 px-4;
 }
-
-

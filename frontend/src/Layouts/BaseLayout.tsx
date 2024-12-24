@@ -1,12 +1,15 @@
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
+import Anouncements from "../components/Anouncements";
 
 const BaseLayout = () => {
   return (
-    <div className="flex flex-col justify-between gap-4 md:gap-20">
+    <div className="">
+      <Anouncements />
+
       <Header />
-      <main className="flex-1 flex-grow">
+      <main className="">
         <Outlet />
       </main>
       <Footer />

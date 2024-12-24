@@ -1,41 +1,5 @@
-import ArrowDown from "./arrow-down-orange.svg";
-import DaLogo from "./da-logo-blk-outline.png";
-import DaDrone from "./drone-with-bag-m.png";
-import Logo from "./logo.png";
-import BannerImage from "./saf.jpg";
-import PillarSpiral from "./pillar-pattern-orange.svg";
-import Spiral from "./spiral.svg";
-import AgriImage from "./agri.jpg";
-import TrainingImage from "./training.jpg";
-import VideoImage from "./video.jpg";
-import VtolImage from "./vtol.jpg";
-import MappingImage from "./mapping.jpg";
-import SurveillanceImage from "./surveillance.jpg";
-import ShieldIcon from "./shield.png";
-import MoneyBagIcon from "./moneybag.png";
-import DroneIcon from "./drone.png";
-import PilotIcon from "./pilot.png";
-import TrainingIcon from "./training.png";
-import PropellerIcon from "./propeller.png";
-import AboutBannnerImage from "./about-banner.png";
-import Aviation from "./aviation.jpg";
-
-
-const phoneNumber = '+919507207645';
-const mail = 'contact@uavhelpline.com';
-
-
-
-export { ArrowDown, companies, Aviation, ShieldIcon, MoneyBagIcon, AboutBannnerImage, DroneIcon, PropellerIcon, TrainingIcon, PilotIcon, DaDrone, DaLogo, BannerImage, phoneNumber, mail, Spiral, Logo, PillarSpiral, VtolImage, AgriImage, TrainingImage, VideoImage, MappingImage, SurveillanceImage }
-
-const companies = {
+{
     "indian-drone-manufacturers": [
-        {
-            "id": 0,
-            "name": "Drone Anatomy",
-            "website": "https://www.droneanatomy.com/",
-            "logo": "./company-logos/droneanatomy.png"
-        },
         {
             "id": 1,
             "name": "Garuda Aerospace",
@@ -625,7 +589,7 @@ const companies = {
             "logo": "./company-logos/ic_daybest.png"
         }
     ],
-    "Training": [
+    "drone-training-institute-and-rptos": [
         {
             "id": 1,
             "name": "CASR, Anna University",
@@ -636,7 +600,7 @@ const companies = {
             "id": 2,
             "name": "Garuda Aerospace",
             "website": "https://tropogo.com/marketplace/drone-training-courses/institute-overview/garuda-aerospace-60CAEF1984-FQ8Q7HT994",
-            "logo": "./company-logos/ic_garuda_eco.png"
+            "logo": "./company-logos/ic_garudarpto_eco.png"
         },
         {
             "id": 3,
@@ -705,13 +669,7 @@ const companies = {
             "logo": "./company-logos/bg_flapone.png"
         }
     ],
-    "Agriculture": [
-        {
-            "id": 0,
-            "name": "Drone Anatomy",
-            "website": "https://www.droneanatomy.com/",
-            "logo": "./company-logos/droneanatomy.png"
-        },
+    "agri-drone-manufacture": [
         {
             "id": 1,
             "name": "Paras Aerospace",
@@ -876,12 +834,6 @@ const companies = {
         }
     ],
     "drone-service-companies": [
-        {
-            "id": 0,
-            "name": "Drone Anatomy",
-            "website": "https://www.droneanatomy.com/",
-            "logo": "./company-logos/droneanatomy.png"
-        },
         {
             "id": 1,
             "name": "Paras Aerospace",
@@ -2303,13 +2255,7 @@ const companies = {
             "logo": "./company-logos/ic_paras.png"
         }
     ],
-    "Military": [
-        {
-            "id": 0,
-            "name": "Drone Anatomy",
-            "website": "https://www.droneanatomy.com/",
-            "logo": "./company-logos/droneanatomy.png"
-        },
+    "military-drones": [
         {
             "id": 1,
             "name": "Throttle Aerospace",
@@ -2921,12 +2867,6 @@ const companies = {
     ],
     "drone-components": [
         {
-            "id": 0,
-            "name": "Drone Anatomy",
-            "website": "https://www.droneanatomy.com/",
-            "logo": "./company-logos/droneanatomy.png"
-        },
-        {
             "id": 1,
             "name": "Vector Technics",
             "website": "https://vectortechnics.com/",
@@ -3136,9 +3076,9 @@ const companies = {
     "ecosystem-builder": [
         {
             "id": 1,
-            "name": "UAV Helpline",
-            "website": "https://www.uavhelpline.com",
-            "logo": "./company-logos/uavhelpline.png"
+            "name": "TropoGo",
+            "website": "https://www.tropogo.com",
+            "logo": "./company-logos/ic_tropogo.png"
         }
     ],
     "academia": [
