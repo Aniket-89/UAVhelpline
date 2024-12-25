@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { marked } from "marked";
 import fm from "front-matter";
 
 interface BlogMetadata {
