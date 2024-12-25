@@ -1,59 +1,85 @@
-import React from "react";
-import { DaDrone } from "../assets/assets";
+import React, { useEffect, useState } from "react";
+import { marked } from "marked";
+import fm from "front-matter";
 import { IoIosArrowForward } from "react-icons/io";
 
-const newsItems = [
-  {
-    date: "December 17, 2024",
-    title: "DHS, FBI, FAA & DoD Joint Statement on Ongoing Response to Reported Drone Sightings",
-    description: "There are more than one million drones lawfully registered with the FAA in the United States and there are thousands of commercial, hobbyist and law enforcement drones lawfully in the sky on any given day. With the technology landscape evolving, we expect that number to increase over time....",
-    image: DaDrone,
-  },
-  {
-    date: "December 17, 2024",
-    title: "DHS, FBI, FAA & DoD Joint Statement on Ongoing Response to Reported Drone Sightings",
-  },
-  {
-    date: "December 17, 2024",
-    title: "DHS, FBI, FAA & DoD Joint Statement on Ongoing Response to Reported Drone Sightings",
-  },
-  {
-    date: "December 17, 2024",
-    title: "DHS, FBI, FAA & DoD Joint Statement on Ongoing Response to Reported Drone Sightings",
-  },
-  {
-    date: "December 17, 2024",
-    title: "DHS, FBI, FAA & DoD Joint Statement on Ongoing Response to Reported Drone Sightings",
-  },
-];
-
 interface NewsItemProps {
-  date: string;
+  id: string;
+  published_date: string;
   title: string;
-  description?: string;
-  image?: string;
+  brief?: string;
+  thumbnail?: string;
 }
 
-const NewsItem: React.FC<NewsItemProps> = ({ date, title, description, image }) => (
+const NewsItem: React.FC<NewsItemProps> = ({
+  published_date,
+  title,
+  brief,
+  thumbnail,
+}) => (
   <div className="grid gap-1 flex-1">
-    {image && (
+    {thumbnail && (
       <img
-        src={image}
-        alt=""
+        src={thumbnail}
+        alt="News Image"
         className="aspect-[5/4] mb-2 object-cover object-center h-[280px]"
       />
     )}
-    <p>{date}</p>
+    <p>{new Date(published_date).toLocaleDateString()}</p>
     <a href="#" className="font-semibold text-[17px] hover:underline">
       {title}
     </a>
-    {description && <p>{description}</p>}
+    {brief && <p>{brief}</p>}
   </div>
 );
 
-const LatestNewsSection = () => {
+const LatestNewsSection: React.FC = () => {
+  const [newsItems, setNewsItems] = useState<NewsItemProps[]>([]);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchNewsItems = async () => {
+      try {
+        // Fetch the index of Markdown files
+        const indexResponse = await fetch("/blogs/index.json");
+        if (!indexResponse.ok) throw new Error("Failed to fetch blog index.");
+
+        const blogIndex = await indexResponse.json();
+        const newsPromises = blogIndex.map((blog: { filename: string }) =>
+          fetch(`/blogs/${blog.filename}`).then((res) => res.text())
+        );
+
+        const blogTexts = await Promise.all(newsPromises);
+
+        // Parse the Markdown files
+        const parsedNews = blogTexts.map((text) => {
+          const { attributes } = fm<NewsItemProps>(text);
+          return attributes;
+        });
+
+        setNewsItems(parsedNews);
+      } catch {
+        setError("Failed to load news items.");
+      }
+    };
+
+    fetchNewsItems();
+  }, []);
+
+  if (error) {
+    return <p className="text-red-500">{error}</p>;
+  }
+
+  if (!newsItems.length) {
+    return (
+      <div className="bg-white container min-h-[300px] text-black flex justify-center items-center max-w-full min-w-[60%] lg:w-fit gap-4 p-10 lg:-translate-y-[15%]">
+        <p className="text-3xl">Loading...</p>
+      </div>
+    );
+  }
+
   return (
-    <div className="bg-white container text-black flex flex-col max-w-full lg:w-fit gap-4 p-10 2xl:-translate-y-[15%]">
+    <div className="bg-white container text-black flex flex-col max-w-full min-w-[60%] lg:w-fit gap-4 p-10 lg:-translate-y-[15%]">
       <h3 className="container md:text-[3vw] text-2xl font-medium mb-4">
         Latest News
       </h3>
@@ -63,8 +89,11 @@ const LatestNewsSection = () => {
           {newsItems.slice(1).map((item, index) => (
             <React.Fragment key={index}>
               <div>
-                <p>{item.date}</p>
-                <a href="#" className="font-semibold text-[17px] hover:underline">
+                <p>{new Date(item.published_date).toLocaleDateString()}</p>
+                <a
+                  href={`/news/${item.id}`}
+                  className="font-semibold text-[17px] hover:underline"
+                >
                   {item.title}
                 </a>
               </div>
@@ -74,7 +103,7 @@ const LatestNewsSection = () => {
             </React.Fragment>
           ))}
           <a
-            href="#"
+            href="/news"
             className="font-semibold text-[17px] hover:underline flex items-center justify-end my-4"
           >
             Visit the Newsroom <IoIosArrowForward className="text-primary" />

@@ -9,12 +9,12 @@ import {
 } from "react-icons/fa6";
 
 const SOCIAL_LINKS = [
-  { Icon: FaSquareFacebook, href: "https://www.instagram.com/uavhelpline/profilecard/?igsh=MXFpeXNjZmVzMjRrcA==" },
-  { Icon: FaLinkedinIn, href: "/comingSoon"},
+  { Icon: FaSquareFacebook, href: "https://www.facebook.com/people/Uavhelpline/61571034481544/" },
+  { Icon: FaLinkedinIn, href: "/comingSoofn"},
   { Icon: FaInstagram, href: "https://www.instagram.com/uavhelpline/profilecard/?igsh=MXFpeXNjZmVzMjRrcA==" },
-  { Icon: FaYoutube, href: "/comingSoon"},
+  { Icon: FaYoutube, href: "/comingSoons"},
   { Icon: FaXTwitter, href: "/comingSoon"},
-  { Icon: IoIosMail, href: "https://www.instagram.com/uavhelpline/profilecard/?igsh=MXFpeXNjZmVzMjRrcA==" },
+  { Icon: IoIosMail, href: "mailto:uavhelpline@gmail.com" },
 ];
 
 const POLICIES_LINKS = [

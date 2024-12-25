@@ -2,21 +2,22 @@ import { Logo } from "../assets/assets";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { ImCross } from "react-icons/im";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
 import SearchForm from "./SearchForm";
 
 const NAV_LINKS = [
-  { label: "About", href: "/comingSoon"},
-  { label: "Jobs", href: "/comingSoon"},
-  { label: "News", href: "/comingSoon"},
-  { label: "Aircraft", href: "/comingSoon"},
-  { label: "Air Traffic", href: "/comingSoon"},
-  { label: "Airports", href: "/comingSoon"},
-  { label: "Pilots & Airmen", href: "/comingSoon"},
-  { label: "Data & Research", href: "/comingSoon"},
-  { label: "Regulations", href: "/comingSoon"},
-  { label: "Space", href: "/comingSoon"},
-  { label: "Drones", href: "/comingSoon"},
+  { label: "About", href: "/comingSoon" },
+  { label: "Jobs", href: "/comingSoon" },
+  { label: "News", href: "/news" },
+  { label: "Aircraft", href: "/comingSoon" },
+  { label: "Air Traffic", href: "/comingSoon" },
+  { label: "Airports", href: "/comingSoon" },
+  { label: "Pilots & Airmen", href: "/comingSoon" },
+  { label: "Data & Research", href: "/comingSoon" },
+  { label: "Regulations", href: "/comingSoon" },
+  { label: "Space", href: "/comingSoon" },
+  { label: "Drones", href: "/comingSoon" },
 ];
 
 const Header = () => {
@@ -27,17 +28,22 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-white w-full flex justify-between border-b border-white">
+      <header className="bg-white w-full flex justify-between border-b border-light">
         <nav className="flex justify-between items-center w-full container mt-2 px-4">
           {/* Logo */}
-          <div className="overflow-hidden flex gap-1 min-w-[255px] items-center mb-4">
+          <Link
+            to={"/"}
+            className="overflow-hidden flex gap-1 min-w-[255px] items-center mb-4"
+          >
             <img
               src={Logo}
               alt="UAV Helpline Logo"
               className="h-[75px] object-cover object-center"
             />
-            <h2 className="text-2xl font-semibold text-primary">UAV Helpline</h2>
-          </div>
+            <h2 className="text-2xl font-semibold text-primary">
+              UAV Helpline
+            </h2>
+          </Link>
 
           <div className="hidden xl:flex flex-col justify-end">
             <div className="flex items-center justify-end text-navLink max-w-1/2 gap-10 my-2 font-semibold pr-4">
