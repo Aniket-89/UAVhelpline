@@ -1,4 +1,5 @@
 import { TbDrone } from "react-icons/tb";
+import { phoneNumber } from "../assets/assets";
 
 const Anouncements = () => {
   return (
@@ -16,7 +17,7 @@ const Anouncements = () => {
       </div>
       <div className="container flex gap-1 text-white text-sm p-[6px]">
         <span></span>
-        Contact us at: 1-800-376-6345
+        Contact us at: {phoneNumber}
       </div>
     </>
   );
