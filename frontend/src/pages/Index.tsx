@@ -1,5 +1,5 @@
 import { IoIosArrowForward } from "react-icons/io";
-import { AgriImage, Aviation, DaDrone, DroneDji, EquityAndJobsImage, SafetyImage, SustainibilityImage, VtolImage } from "../assets/assets";
+import { AgriImage, Aviation, DroneDji, EquityAndJobsImage, SafetyImage, SustainibilityImage, VtolImage } from "../assets/assets";
 import LatestNewsSection from "../components/LatestNewsSection";
 
 const NAV_LINKS = [
