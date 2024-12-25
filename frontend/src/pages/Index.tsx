@@ -1,5 +1,5 @@
 import { IoIosArrowForward } from "react-icons/io";
-import { Aviation, DaDrone, EquityAndJobsImage, SafetyImage, SustainibilityImage } from "../assets/assets";
+import { AgriImage, Aviation, DaDrone, DroneDji, EquityAndJobsImage, SafetyImage, SustainibilityImage, VtolImage } from "../assets/assets";
 import LatestNewsSection from "../components/LatestNewsSection";
 
 const NAV_LINKS = [
@@ -172,26 +172,25 @@ const Index = () => {
           <div className="flex md:flex-row flex-col gap-8 w-full">
             <div className="md:w-1/2">
               <img
-                src={DaDrone}
+                src={AgriImage}
                 alt="Featured Topic"
                 className="object-center object-cover w-full aspect-[3/2]"
               />
               <p className="flex items-center justify-center py-4 border border-gray">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Eligendi, tenetur.
+                Agricultural use of drones
               </p>
             </div>
 
             <div className="flex flex-col md:w-1/2 gap-8">
               <FeaturedTopic
-                imgSrc={DaDrone}
-                title="HAZMAT - DANGEROUS GOODS SAFETY"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                imgSrc={VtolImage}
+                title="UAV Regulations"
+                description="All the changes in the UAV regulations."
               />
               <FeaturedTopic
-                imgSrc={DaDrone}
-                title="HAZMAT - DANGEROUS GOODS SAFETY"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                imgSrc={DroneDji}
+                title="Drones"
+                description="What's happening in the drone industry."
               />
             </div>
           </div>

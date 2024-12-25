@@ -1,4 +1,5 @@
 import React from "react";
+import { mail } from "../assets/assets";
 import { IoIosMail } from "react-icons/io";
 import {
   FaSquareFacebook,
@@ -10,11 +11,11 @@ import {
 
 const SOCIAL_LINKS = [
   { Icon: FaSquareFacebook, href: "https://www.facebook.com/people/Uavhelpline/61571034481544/" },
-  { Icon: FaLinkedinIn, href: "/comingSoofn"},
+  { Icon: FaLinkedinIn, href: "https://www.linkedin.com"},
   { Icon: FaInstagram, href: "https://www.instagram.com/uavhelpline/profilecard/?igsh=MXFpeXNjZmVzMjRrcA==" },
-  { Icon: FaYoutube, href: "/comingSoons"},
+  { Icon: FaYoutube, href: "https://www.youtube.com/"},
   { Icon: FaXTwitter, href: "/comingSoon"},
-  { Icon: IoIosMail, href: "mailto:uavhelpline@gmail.com" },
+  { Icon: IoIosMail, href: `mailto:${mail}` },
 ];
 
 const POLICIES_LINKS = [
@@ -71,6 +72,8 @@ const SocialLinks = () => (
       <a
         key={href}
         href={href}
+        target="_blank"
+        rel="noopener noreferrer"
         className="bg-primary bg-opacity-85 size-10 flex items-center justify-center rounded-full"
       >
         <Icon className="hover:-translate-y-3 size-6 text-white hover:text-accent3 transition-all duration-200 ease-in" />
