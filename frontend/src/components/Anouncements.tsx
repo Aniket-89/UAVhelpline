@@ -17,7 +17,7 @@ const Anouncements = () => {
       </div>
       <div className="container flex gap-1 text-white text-sm p-[6px]">
         <span></span>
-        Contact us at: {phoneNumber}
+        Contact us at: <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
       </div>
     </>
   );
