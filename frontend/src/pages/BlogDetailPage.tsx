@@ -45,7 +45,7 @@ const BlogDetail: React.FC = () => {
 
   return (
     <div className="bg-white py-12">
-      <div className="container w-[60%]">
+      <div className="container lg:w-[60%]">
         {!metadata || !content ? (
           <div className="flex justify-center items-center h-[40vh] w-full">
             <p className="text-3xl">Loading...</p>
