@@ -5,6 +5,8 @@
 python3 -m venv .uav
 ```
 
-2. Activate teh virtual environment:
+2. Activate the virtual environment:
 - Linux/Mac: `source .uav/bin/activate`
 - Windows: `.uav\Scripts\activate`
+
+3. Install the dependencies(see below):
