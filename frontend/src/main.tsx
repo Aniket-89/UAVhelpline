@@ -9,11 +9,13 @@ import Index from "./pages/Index";
 import ComingSoon from "./pages/ComingSoon";
 import BlogListPage from "./pages/BlogListPage";
 import BlogDetailPage from "./pages/BlogDetailPage";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <BaseLayout />,
+    errorElement: <NotFound />,
     children: [
       {
         index: true,
