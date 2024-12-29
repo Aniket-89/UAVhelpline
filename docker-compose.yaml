@@ -1,0 +1,20 @@
+services:
+  backend:
+
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: backend-uavhelpline:v1
+    environment:
+      - PORT=8020
+    env_file:
+      - backend/.env
+    ports:
+      - "8001:8020"
+    command: sh -c "chmod +x /app/migrate.sh && sh /app/migrate.sh && /app/entrypoint.sh"
+    volumes:
+      - staticfiles:./backend/staticfiles/
+
+volumes:
+  staticfiles:
+    # external: true
