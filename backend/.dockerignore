@@ -1,3 +1,71 @@
 .env
+.uav/
 
-/.uav
+# Byte-compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environments
+env/
+venv/
+ENV/
+*.env
+*.venv
+
+# Django secret key and environment variables
+*.env
+.env.*
+
+# Logs
+*.log
+
+# Media and static files
+media/
+staticfiles/
+static/
+
+# Django database files
+*.sqlite3
+db.sqlite3
+
+# Git
+.git
+.gitignore
+
+# Docker configuration files (if not needed inside the container)
+.dockerignore
+docker-compose.yml
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node modules (if using npm/yarn for frontend)
+node_modules/
+
+# Build files
+dist/
+build/
+*.egg-info/
+*.manifest
+
+# Test artifacts
+*.pytest_cache/
+coverage.xml
+htmlcov/
+junit.xml
+.nox/
+.tox/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Backup and temporary files
+*.bak
+*.backup
+*.swp
+*.tmp
