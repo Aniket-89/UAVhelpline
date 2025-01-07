@@ -6,7 +6,7 @@ from django.conf import global_settings as settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('froala_editor/', include('froala_editor.urls')),
-    path('', include('blog.urls'))
+    path('api/v1/', include('blog.urls'))
 ]
 
 if settings.DEBUG:
