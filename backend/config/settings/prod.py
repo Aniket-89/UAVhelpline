@@ -27,3 +27,12 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+
+
+# AWS S3 Configuration (for static and media files)
+AWS_STORAGE_BUCKET_NAME=your_s3_bucket_name
+AWS_ACCESS_KEY_ID=your_aws_access_key_id
+AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
+AWS_S3_REGION_NAME=your_aws_region
+AWS_S3_CUSTOM_DOMAIN=your_custom_domain
+AWS_DEFAULT_ACL=public-read

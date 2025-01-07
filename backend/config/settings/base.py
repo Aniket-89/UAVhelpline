@@ -21,7 +21,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
     # Your apps go here
+    'froala_editor',
+    'blog',
 ]
 
 MIDDLEWARE = [
