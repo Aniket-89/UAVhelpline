@@ -23,8 +23,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Your apps go here
-    'corsheaders',
+    'rest_framework',
     'froala_editor',
+    'corsheaders',
     'blog',
 ]
 
@@ -34,8 +35,14 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'https://your-frontend-domain.com',
+    'http://localhost:3000',
 ]
 
 ROOT_URLCONF = 'config.urls'
