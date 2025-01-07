@@ -1,4 +1,4 @@
-import BlogList from "../components/PostList";
+import PostList from "../components/PostList";
 
 
 const CATEGORIES_LINK = [
@@ -13,7 +13,7 @@ const CATEGORIES_LINK = [
 ];
 
 
-const BlogListPage = () => {
+const PostListPage = () => {
   return (
     <div className="bg-white py-16">
       <div className="container flex justify-between">
@@ -27,7 +27,7 @@ const BlogListPage = () => {
           <span className="bg-lightBg w-full h-[1px]"></span>
         </div>
 
-        <BlogList />
+        <PostList />
 
         <div className=""></div>
       </div>
@@ -35,4 +35,4 @@ const BlogListPage = () => {
   );
 };
 
-export default BlogListPage;
+export default PostListPage;

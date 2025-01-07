@@ -7,8 +7,8 @@ import "aos/dist/aos.css";
 import BaseLayout from "./Layouts/BaseLayout";
 import Index from "./pages/Index";
 import ComingSoon from "./pages/ComingSoon";
-import BlogListPage from "./pages/BlogListPage";
-import BlogDetailPage from "./pages/PostDetailPage";
+import PostListPage from "./pages/PostListPage";
+import PostDetailPage from "./pages/PostDetailPage";
 import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "news/",
-        element: <BlogListPage />,
+        element: <PostListPage />,
       },
     //   {
     //     path: "industry-directory/",
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
     //   },
       {
         path: "news/:id",
-        element: <BlogDetailPage />,
+        element: <PostDetailPage />,
       },
     ],
   },

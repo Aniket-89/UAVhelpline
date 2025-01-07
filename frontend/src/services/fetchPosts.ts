@@ -12,7 +12,7 @@ export const fetchPosts = async () => {
 }
 
 
-export const fetchSinglePost = async (id) => {
+export const fetchSinglePost = async (id?: string) => {
     const response = await fetch(`${API_URL}${id}`)
     if (!response.ok) {
         throw new Error('Failed to fetch posts');    
