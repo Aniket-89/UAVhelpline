@@ -2,3 +2,102 @@
 .env
 
 .uav/
+# Python bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+env/
+venv/
+ENV/
+*.env
+*.venv
+
+# Django secret key
+*.env
+.env.*
+
+# Database files
+*.sqlite3
+db.sqlite3
+
+# Django migration files
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Media and static files
+media/
+staticfiles/
+static/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+.idea/
+
+# IDE and editor settings
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# Test reports
+*.pytest_cache/
+junit.xml
+nosetests.xml
+coverage.xml
+*.cover
+*.coverage.*
+
+# Node modules (if using npm for frontend)
+node_modules/
+
+# Compiled files (e.g., SASS/LESS)
+*.css.map
+*.js.map
+
+# Build files
+/dist/
+/build/
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+*.old
+
+# Python distribution/packaging
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+
+# pipenv and poetry
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Pyright/TypeScript
+pyrightconfig.json
+.mypy_cache/
+
+# Celery
+celerybeat-schedule
+
+# IDE and text editor swap files
+*.swp
+*.swo
