@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Your apps go here
+    'corsheaders',
     'froala_editor',
     'blog',
 ]
