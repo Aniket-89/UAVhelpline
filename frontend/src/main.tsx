@@ -8,7 +8,7 @@ import BaseLayout from "./Layouts/BaseLayout";
 import Index from "./pages/Index";
 import ComingSoon from "./pages/ComingSoon";
 import BlogListPage from "./pages/BlogListPage";
-import BlogDetailPage from "./pages/BlogDetailPage";
+import BlogDetailPage from "./pages/PostDetailPage";
 import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([

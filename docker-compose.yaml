@@ -13,8 +13,8 @@ services:
       - "8001:8020"
     command: sh -c "chmod +x /app/migrate.sh && sh /app/migrate.sh && /app/entrypoint.sh"
     volumes:
-      - staticfiles:./backend/staticfiles/
+      - staticfiles:/app/staticfiles/
 
 volumes:
   staticfiles:
-    # external: true
+    external: true
