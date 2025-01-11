@@ -24,12 +24,14 @@ import SustainibilityImage from "./yellow_clouds.jpg";
 import EquityAndJobsImage from "./jobs.jpg";
 import DroneDji from './dji.jpg'
 
+import PlaceholderImage from '/images/placeholder.png'
+
 const phoneNumber = '+919507207645';
 const mail = 'uavhelpline@gmail.com';
 
 
 
-export { ArrowDown, companies, DroneDji, SafetyImage, SustainibilityImage, EquityAndJobsImage, Aviation, ShieldIcon, MoneyBagIcon, AboutBannnerImage, DroneIcon, PropellerIcon, TrainingIcon, PilotIcon, DaDrone, DaLogo, BannerImage, phoneNumber, mail, Spiral, Logo, PillarSpiral, VtolImage, AgriImage, TrainingImage, VideoImage, MappingImage, SurveillanceImage }
+export { ArrowDown, companies, DroneDji, SafetyImage, PlaceholderImage, SustainibilityImage, EquityAndJobsImage, Aviation, ShieldIcon, MoneyBagIcon, AboutBannnerImage, DroneIcon, PropellerIcon, TrainingIcon, PilotIcon, DaDrone, DaLogo, BannerImage, phoneNumber, mail, Spiral, Logo, PillarSpiral, VtolImage, AgriImage, TrainingImage, VideoImage, MappingImage, SurveillanceImage }
 
 const companies = {
     "indian-drone-manufacturers": [

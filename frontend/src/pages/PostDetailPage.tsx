@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { fetchSinglePost } from "../services/fetchPosts";
+import { PlaceholderImage } from "../assets/assets"
 
 interface Postdata {
   id: number;
   title: string;
-  cover: string;
+  cover?: string;
   brief: string;
   body: Node;
   updated_at: string;
@@ -39,6 +40,7 @@ const PostDetailPage: React.FC = () => {
   if (error) {
     return <p className="text-red-500">{error}</p>;
   }
+ 
 
   return (
     <div className="bg-white py-12">
@@ -50,7 +52,7 @@ const PostDetailPage: React.FC = () => {
         ) : (
           <div className="p-6">
             <img
-              src={post.cover}
+              src={post.cover ? post.cover : PlaceholderImage}
               alt={post.title}
               className="w-full aspect-[16/9] object-cover rounded-md mb-4"
             />
