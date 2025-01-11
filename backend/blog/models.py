@@ -15,7 +15,7 @@ class Blog(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ['-published_at']
+        ordering = ['-updated_at']
 
     def save(self, *args, **kwargs):
         if not self.slug:

@@ -43,7 +43,12 @@ REST_FRAMEWORK = {
         'anon': '10/minute',  # Limit for anonymous users (e.g., 100 requests per day)
         'user': '1000/day', # Limit for authenticated users
     },
+  
     'NON_FIELD_ERRORS_KEY': 'Please try again in some time.',
+  
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,  # This sets the default page size to 10
+
 
 }
 
