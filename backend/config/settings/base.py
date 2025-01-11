@@ -23,11 +23,29 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Your apps go here
+    "rest_framework_api_key",
     'rest_framework',
     'froala_editor',
     'corsheaders',
+    'drf_yasg',
     'blog',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',  # For anonymous users
+        'rest_framework.throttling.UserRateThrottle',  # For authenticated users
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '10/minute',  # Limit for anonymous users (e.g., 100 requests per day)
+        'user': '1000/day', # Limit for authenticated users
+    },
+    'NON_FIELD_ERRORS_KEY': 'Please try again in some time.',
+    
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_api_key.permissions.HasAPIKey',
+    ],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
