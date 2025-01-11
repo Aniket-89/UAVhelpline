@@ -2,6 +2,7 @@ const API_URL = 'http://127.0.0.1:8000/api/v1/blogs/';
 
 
 export const fetchPosts = async () => {
+    
     const response = await fetch(`${API_URL}`);
     if (response.status !== 200) {
         if (response.status == 403) {

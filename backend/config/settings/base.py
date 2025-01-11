@@ -23,7 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Your apps go here
-    "rest_framework_api_key",
+    # "rest_framework_api_key",
     'rest_framework',
     'froala_editor',
     'corsheaders',
@@ -32,6 +32,9 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK = {
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'rest_framework_api_key.permissions.HasAPIKey',
+    # ],
     'DEFAULT_THROTTLE_CLASSES': [
         'rest_framework.throttling.AnonRateThrottle',  # For anonymous users
         'rest_framework.throttling.UserRateThrottle',  # For authenticated users
@@ -41,10 +44,7 @@ REST_FRAMEWORK = {
         'user': '1000/day', # Limit for authenticated users
     },
     'NON_FIELD_ERRORS_KEY': 'Please try again in some time.',
-    
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_api_key.permissions.HasAPIKey',
-    ],
+
 }
 
 MIDDLEWARE = [
